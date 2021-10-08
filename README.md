@@ -1,1 +1,1 @@
-# historyoflight
+# History of Light
