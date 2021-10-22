@@ -2,8 +2,10 @@ document.body.onscroll = function () {
   let scrollY = window.scrollY;
 
   let candle = document.getElementById("candle");
+  let wick = document.getElementById("wick");
   let wax = document.getElementById("candleWax");
   let night = document.getElementById("night");
+  let fireSub = document.getElementById("fireSub");
   
   let block1 = document.getElementById("block1");
   let blockCamp = document.getElementById("blockCampfire");
@@ -18,6 +20,7 @@ document.body.onscroll = function () {
   document.body.style.setProperty("--scrollY", scrollY);
   document.body.style.setProperty("--h", scrollY / 10);
 
+// change #night bg, #land bg & opacity fire candle
   if (scrollY >= night.offsetTop) {
     document.querySelector("#night").style.backgroundImage =
       "url('https://static.typingclub.com/m/tpmedia/img/sky2.png')";
@@ -34,37 +37,59 @@ document.body.onscroll = function () {
     document.getElementsByClassName("fire-sub")[0].style.opacity = "0";
   }
 
+// reduce opacity mountain and campfire
   if(scrollY >= blockOffTAndCampOffW + 500){
     document.querySelector("#land").style.opacity = "calc( 1 - ((var(--scrollY) - 2000) * 0.001))";
-    document.getElementsByClassName("fire-sub")[0].style.opacity = "calc( 0 + ((var(--scrollY) - 3200) * 0.001))";
+    document.getElementsByClassName("fire-sub")[0].style.opacity = "calc( 0 + ((var(--scrollY) - 2800) * 0.001))";
   }
 
-
+// change position mountain from fixed to static
   if(scrollY >= block2.offsetTop){
     document.querySelector("#land").style.position = "static";
   }
-else{
-  document.querySelector("#land").style.position = "fixed";
-}
-  // if (scrollY >= block1.offsetTop + blockCamp.offsetWidth + blockCandle.offsetWidth - 500) {
-  //   document.getElementsByClassName("fire-sub")[0].style.opacity = "calc( 0 + ((var(--scrollY) - 4500) * 0.001))";
-  // }
-  // if (scrollY >= 1600 && scrollY < 2500) {
-  //   document.getElementsByClassName("fire-sub")[0].style.opacity = "1";
-  // }
+  else{
+    document.querySelector("#land").style.position = "fixed";
+  }
 
-  // if (scrollY == block2.offsetTop) {
-  //   alert();
-  //   candle.style.transform =
-  //     "scale(calc(1 - ((var(--scrollY) - 4500) * 0.001)))";
-  //   wax.style.transform = "scale(calc(1 - ((var(--scrollY) - 2500) * 0.001)))";
-  // } else if (scrollY > 3001) {
-  //   candle.style.transform = "scale(0.5)";
-  //   wax.style.transform = "scale(0.5)";
-  // } else {
-  //   candle.style.transform = "scale(1)";
-  //   wax.style.transform = "scale(1)";
-  // }
+// scaling candle and fire
+  if(scrollY >= block2.offsetTop - 600 && scrollY < block2.offsetTop + 300){
+    let b2_6 = block2.offsetTop - 600;
+    candle.style.transform = "scale(calc(1 - ((var(--scrollY) - "+ b2_6 +") * 0.001)))";
+    wax.style.transform = "scale(calc(1 - ((var(--scrollY) - "+ b2_6 +") * 0.001)))";
+    if (scrollY >= block2.offsetTop - 100){
+      candle.style.transform = "scale(calc(1 - ((var(--scrollY) - "+ b2_6 +") * 0.001))) translateY(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * 5px))";
+    }
+    if (scrollY >= block2.offsetTop + 100){
+      candle.style.transform = "scale(0.33) translateY(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * 5px))";
+    }
+  }
+  else{
+    candle.style.transform = "scale(1) translateY(0)";
+    wax.style.transform = "scale(1)";
+  }
+
+  if(scrollY >= block2.offsetTop + 300 && scrollY < block2.offsetTop + 380){
+    candle.style.transform = "scale(0.33) translateY(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * 5px)) ";
+  }
+  if(scrollY >= block2.offsetTop + 380){
+    candle.style.transform = "scale(0.33) translateY(240%) translateX(-15.25%)";
+
+  }
+
+// opacity wax candle & wick candle
+  if(scrollY >= block2.offsetTop - 300 && scrollY < block2.offsetTop){
+    wax.style.opacity = "calc( 0 + ((var(--scrollY) - "+ (block2.offsetTop - 300) +") * 0.001))";
+    wick.style.opacity = "calc( 0 + ((var(--scrollY) - "+ (block2.offsetTop - 300) +") * 0.001))";
+  }
+  else if(scrollY >= block2.offsetTop){
+    wax.style.opacity = 0;
+    wick.style.opacity = 0;
+  }
+  else{
+    wax.style.opacity = 1;
+    wick.style.opacity = 1;
+  }
+
 
 };
 
