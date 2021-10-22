@@ -73,17 +73,9 @@ document.body.onscroll = function () {
   if(scrollY >= block2.offsetTop + 300){
     candle.style.transform = "scale(0.33) translateY(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * 0.5vh)) translateX(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * -0.033%))";
   }
-  // if(scrollY >= block2.offsetTop + 400){
-  //   candle.style.transform = "scale(0.33) translateY(calc(90% + (var(--scrollY) - "+ (block2.offsetTop - 100) +") * 0.2vh)) translateX(-15.25%)";
-  // }
   if(scrollY >= queen.offsetTop - 350){
     candle.style.transform = "scale(0.33) translateY(2050px) translateX(-15.25%)";
   }
- 
-
-  // if(scrollY >= block3.offsetTop - 700){
-  //   candle.style.opacity = "calc( 1 - ((var(--scrollY) -  "+ (block3.offsetTop - 700) +") * 0.05))";
-  // }
 
 // opacity wax candle & wick candle
   if(scrollY >= block2.offsetTop - 300 && scrollY < block2.offsetTop){
@@ -99,6 +91,13 @@ document.body.onscroll = function () {
     wick.style.opacity = 1;
   }
 
+// opacity smoke
+if(scrollY >= queen.offsetTop){
+  document.getElementById("smoke").style.opacity = 1;
+}
+else{
+  document.getElementById("smoke").style.opacity = 0;
+}
 
 };
 

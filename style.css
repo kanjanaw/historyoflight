@@ -57,6 +57,11 @@ div {
     #9be2fe
   );
 }
+.block3{
+  background: #9be2fe;
+  height: 100%;
+  width: 100vw;
+}
 .flex-center-parent {
   display: flex;
   justify-content: center;
@@ -272,8 +277,7 @@ div {
   margin-right: auto; 
   width: 24%;
   margin-top: 300px;
-  /* position: sticky; */
-  margin-bottom: 7%;
+  padding-bottom: 300px;
   align-self: flex-end; 
   
 
@@ -283,12 +287,6 @@ div {
   height: 100vh;
   width: 100vw;
 }
-/* #queen [data-active="1"] {
-  position: fixed;
-  bottom: 7%;
-  left: 0%;
-  right: 0%;
-} */
 
 #post {
   width: 400px;
@@ -325,4 +323,21 @@ div {
   background-image: url("https://static.typingclub.com/m/tpmedia/img/sky2.png");
   width: 100vw;
   height: 100vh;
+}
+
+.smoke{
+  z-index: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top: -70%;
+  width: 80%;
+  transition: 1s;
+  opacity: 0;
+}
+#oillamp{
+  z-index: auto;
+  width: 40%;
+  margin-top: -10%;
+  margin-left: 13%;
 }
