@@ -3,6 +3,7 @@
   --size: calc((100vw / 30));
   --height: calc(100vh / 25);
   --scrollY: 0;
+  --prismTop: 0;
 }
 body {
   margin: 0;
@@ -60,6 +61,35 @@ div {
 .block3{
   background: #9be2fe;
   height: 100%;
+  width: 100vw;
+}
+.block4{
+  background: linear-gradient(
+    #9be2fe,
+    #67d1fb);
+    height: 100%;
+    width: 100vw;
+}
+.block5{
+  background: linear-gradient(
+    #67d1fb,
+    #38a3d1,
+    #246fa8,
+    #1e528e,
+    #123558,
+    #071b26,
+    #000);
+  height: 350vh;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+}
+.block6{
+  background: black;
+}
+.transperent {
+  background: transparent;
+  height: 100vh;
   width: 100vw;
 }
 .flex-center-parent {
@@ -282,11 +312,7 @@ div {
   
 
 }
-.transperent {
-  background: white;
-  height: 100vh;
-  width: 100vw;
-}
+
 
 #post {
   width: 400px;
@@ -330,7 +356,7 @@ div {
   display: block;
   margin-left: auto;
   margin-right: auto; 
-  margin-top: -70%;
+  margin-top: -60%;
   width: 80%;
   transition: 1s;
   opacity: 0;
@@ -340,4 +366,70 @@ div {
   width: 40%;
   margin-top: -10%;
   margin-left: 13%;
+}
+
+.black{
+  background: black;
+  position: relative;
+  display: grid;
+}
+#space{
+  height: 60vh;
+}
+#tri{
+  z-index: 1;
+  place-self: center;
+}
+
+#light1{
+  z-index: auto;
+  width: 0px;
+  height: 100px;
+  background:white;
+  position: absolute;
+  place-self: center start;
+}
+
+.light{
+  width: 0px;
+  height:6vh;
+  margin:0px;
+}
+.rainbow{
+  z-index: auto;
+  position: absolute;
+  place-self: center;
+  left: 49%;
+  width:fit-content;
+  height: fit-content;
+}
+#red{
+  background:red;
+}
+#orange{
+  background: orange;
+}
+#yellow{
+  background:yellow;
+}
+#green{
+  background:rgb(0, 255, 0);
+}
+#blue{
+  background:blue;
+}
+#cyan{
+  background:cyan;
+}
+#purple{
+  background:magenta;
+}
+
+.contain{
+  top: 0;
+  position: sticky;
+  width: 100vw;
+  height: 100vh;
+  transition: .8s;
+  opacity: 0;
 }
