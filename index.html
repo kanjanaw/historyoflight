@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>The History of Light</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
 
 </head>
 <body>
@@ -101,6 +102,58 @@
 
 <div class="block6">
   <div class="transperent"></div>
+</div>
+
+<div class="block7 flex-center-parent">
+  <div class="half">
+    <a-scene embedded>
+      <a-sky color="hsl(260,100%,5%)"></a-sky>
+     
+       <!-- glass  -->
+     
+       <a-cylinder color="whitesmoke" height="0.5" radius="0.1" position="0 1.967 -2" opacity="0.2"></a-cylinder>
+       <a-cone color="whitesmoke" radius-bottom="0.185" radius-top="0.1" height="0.15" position="0 1.643 -2" opacity="0.2"></a-cone>
+     
+       <a-sphere radius="0.25" color="whitesmoke" position="0 1.4 -2" opacity="0.2"></a-sphere>
+     
+       <!-- fire  -->
+       <a-sphere radius="0.07" position="0 1.37 -2" color="red" emissive="red" emissiveIntensity="1" animation="property: material.emissiveIntensity; 
+                 from: 0; 
+                 to: 1; 
+                 dur: 10000; 
+                 easing: easeInOutQuad; 
+                 dir: alternate;"></a-sphere>
+       <a-sphere radius="0.09" position="0 1.36 -2" color="orange" emissive="red" emissiveIntensity="1" animation="property: material.emissiveIntensity; 
+                 from: 0; 
+                 to: 1; 
+                 dur: 10000; 
+                 easing: easeInOutQuad; 
+                 dir: alternate;"></a-sphere>
+       <a-sphere radius="0.12" position="0 1.35 -2" color="yellow" emissive="red" emissiveIntensity="1" animation="property: material.emissiveIntensity; 
+                 from: 0; 
+                 to: 1; 
+                 dur: 10000; 
+                 easing: easeInOutQuad; 
+                 dir: alternate;"></a-sphere>
+     
+       <!-- statue  -->
+       <a-cylinder color="#B8860B" height="0.2" radius="0.04" position="0 1.2 -2"></a-cylinder>
+       <a-cylinder color="#B8860B" height="0.2" radius="0.2" position="0 1.1 -2"></a-cylinder>
+       <a-cylinder color="#B8860B" height="0.1" radius="0.3" position="0 1.0 -2"></a-cylinder>
+       <a-cylinder color="#B8860B" height="0.1" radius="0.4" position="0 0.9 -2"></a-cylinder>
+       <a-cylinder color="#B8860B" height="0.2" radius="0.015" position="0.2 1.125 -2" rotation="0 0 90 "></a-cylinder>
+       <a-cylinder color="#B8860B" height="0.04" radius="0.05" position="0.3 1.125 -2" rotation="0 0 90 "></a-cylinder>
+     
+       <!-- light -->
+       <a-entity light="type: directional; color: #FFF" position="0.2 0 1" animation="property: light.intensity; 
+                 from: 0; 
+                 to: 1; 
+                 dur: 10000; 
+                 easing: easeInOutQuad; 
+                 dir: alternate;"></a-entity>
+       </a-scene> 
+  </div>
+   
 </div>
 
 <!-- <div id="post"> -->
