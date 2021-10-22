@@ -6,11 +6,13 @@ document.body.onscroll = function () {
   let wax = document.getElementById("candleWax");
   let night = document.getElementById("night");
   let fireSub = document.getElementById("fireSub");
+  let queen = document.getElementById("queen");
   
   let block1 = document.getElementById("block1");
   let blockCamp = document.getElementById("blockCampfire");
   let blockCandle = document.getElementById("blockCandle");
   let block2 = document.getElementById("block2");
+  let block3 = document.getElementById("block3");
 
   let scale = 1 - (scrollY - 2500) * 0.001;
   let blockOffTAndCampOffW = block1.offsetTop + blockCamp.offsetWidth;
@@ -57,10 +59,10 @@ document.body.onscroll = function () {
     candle.style.transform = "scale(calc(1 - ((var(--scrollY) - "+ b2_6 +") * 0.001)))";
     wax.style.transform = "scale(calc(1 - ((var(--scrollY) - "+ b2_6 +") * 0.001)))";
     if (scrollY >= block2.offsetTop - 100){
-      candle.style.transform = "scale(calc(1 - ((var(--scrollY) - "+ b2_6 +") * 0.001))) translateY(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * 5px))";
+      candle.style.transform = "scale(calc(1 - ((var(--scrollY) - "+ b2_6 +") * 0.001))) translateY(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * 0.5vh)) translateX(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * -0.033%))";
     }
     if (scrollY >= block2.offsetTop + 100){
-      candle.style.transform = "scale(0.33) translateY(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * 5px))";
+      candle.style.transform = "scale(0.33) translateY(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * 0.5vh)) translateX(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * -0.033%))";
     }
   }
   else{
@@ -68,13 +70,20 @@ document.body.onscroll = function () {
     wax.style.transform = "scale(1)";
   }
 
-  if(scrollY >= block2.offsetTop + 300 && scrollY < block2.offsetTop + 380){
-    candle.style.transform = "scale(0.33) translateY(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * 5px)) ";
+  if(scrollY >= block2.offsetTop + 300){
+    candle.style.transform = "scale(0.33) translateY(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * 0.5vh)) translateX(calc((var(--scrollY) - "+ (block2.offsetTop - 100) +") * -0.033%))";
   }
-  if(scrollY >= block2.offsetTop + 380){
-    candle.style.transform = "scale(0.33) translateY(240%) translateX(-15.25%)";
+  // if(scrollY >= block2.offsetTop + 400){
+  //   candle.style.transform = "scale(0.33) translateY(calc(90% + (var(--scrollY) - "+ (block2.offsetTop - 100) +") * 0.2vh)) translateX(-15.25%)";
+  // }
+  if(scrollY >= queen.offsetTop - 350){
+    candle.style.transform = "scale(0.33) translateY(2050px) translateX(-15.25%)";
+  }
+ 
 
-  }
+  // if(scrollY >= block3.offsetTop - 700){
+  //   candle.style.opacity = "calc( 1 - ((var(--scrollY) -  "+ (block3.offsetTop - 700) +") * 0.05))";
+  // }
 
 // opacity wax candle & wick candle
   if(scrollY >= block2.offsetTop - 300 && scrollY < block2.offsetTop){

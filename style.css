@@ -45,7 +45,7 @@ div {
 }
 
 .block2 {
-  height: 150%;
+  height: 100%;
   width: 100vw;
   background: linear-gradient(
     #271149,
@@ -135,7 +135,7 @@ div {
   z-index: auto;
 }
 .fire-sub {
-  position: absolute;
+  position: fixed;
   z-index: auto;
   bottom: 4%;
   animation: filcker 3ms ease-in infinite;
@@ -149,7 +149,7 @@ div {
   border-radius: 50% 0 50% 50%;
   transform: rotate(-45deg);
   z-index: auto;
-  position: absolute;
+  position: fixed;
 }
 .red {
   width: 100px;
@@ -257,6 +257,7 @@ div {
   transform-origin: bottom center;
   left: 0;
   right: 0;
+
 }
 #candleWax {
   text-align: center;
@@ -270,9 +271,9 @@ div {
   margin-left: auto;
   margin-right: auto; 
   width: 24%;
-  margin-top: 40%;
-  position: sticky;
-  bottom: 7%; 
+  margin-top: 300px;
+  /* position: sticky; */
+  margin-bottom: 7%;
   align-self: flex-end; 
   
 
