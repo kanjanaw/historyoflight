@@ -103,7 +103,7 @@ else{
 }
 
 // opacity black
-if(scrollY >= prism.offsetTop){
+if(scrollY >= block5.offsetTop){
   prism.style.opacity = 1;
   
 }else{
