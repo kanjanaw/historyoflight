@@ -444,8 +444,3 @@ a-scene {
   transition: .8s;
   opacity: 0;
 }
-
-.half{
-  width: 80%;
-  height: 80%;
-}
