@@ -17,8 +17,8 @@ div {
   height: 100vh;
 }
 a-scene {
-  height: 100%;
-  width: 100%;
+  height: 50%;
+  width: 50%;
 }
 #blockSunstar{
   height: 200vh;
@@ -94,9 +94,16 @@ a-scene {
     #080019);
 }
 .block7{
-  background: white;
   width: 100%;
   height: 100vh;
+}
+.block8{
+  background: black;
+  height: 1000vh;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .transperent {
   background: transparent;
@@ -443,4 +450,81 @@ a-scene {
   height: 100vh;
   transition: .8s;
   opacity: 0;
+}
+
+#space2{
+  background: linear-gradient(
+    #080019,
+    #000000);
+  height: 50vh;
+}
+.container{
+  top: 0;
+  position: sticky;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+#basebulb{
+  z-index: auto;
+}
+.lightline {
+  width: 0vw;
+  height: 8px;
+  z-index: auto;
+  position: absolute;
+  top:45.5%;
+  background-image: linear-gradient(#f3ac47, rgba(251,225,29,1), #f3ac47);
+  box-shadow: 0 0 15px 8px #f3ac47;
+  border-radius: 20px;
+  transition: 2s;
+}
+
+.lightneon{
+  width: 5.25vw;
+  height: 8px;
+  z-index: -1;
+  position: absolute;
+  top:45.5%;
+  background:transparent;
+  animation: none;
+  box-shadow: 0 0 300px 60px #fae30e;
+}
+@keyframes effect1 {
+  from{
+    box-shadow: 0 0 50px 10px #fae30e;
+  }to{
+    box-shadow: 0 0 300px 60px #fae30e;
+  }
+}
+
+@keyframes effect2 {
+  from{
+    box-shadow: 0 0 300px 60px #fae30e;
+  }to{
+    box-shadow: 0 0 50px 10px #fae30e;
+  }
+}
+
+.ledbulb{
+  width: 9%;
+  height: 34%;
+  background: rgba(240, 240, 240, 1);
+  z-index: auto;
+  position: absolute;
+  top: 27%;
+  border-radius: 50% 50% 40% 40% / 60% 60% 30% 30%;
+  opacity: 0;
+  animation: shine 1s infinite alternate;
+}
+
+@keyframes shine {
+  from {
+    box-shadow: 0 0 90px rgba(255, 255, 213, 0.5), 0 0 40px rgba(255, 255, 213, 0.5),
+      inset 0 0 60px 10px rgba(255, 255, 213, 0.5);
+  }
+  to {
+    box-shadow: 0 0 50px rgba(255, 255, 213, 0.5), 0 0 30px rgba(255, 255, 213, 0.5),
+      inset 0 0 28px 15px rgba(255, 255, 213, 0.5);
+  }
 }

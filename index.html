@@ -8,7 +8,7 @@
 
 </head>
 <body>
-  <!-- partial:index.partial.html -->
+  <!-- Sun and Star -->
 <div id="blockSunstar">
   <div id="day"></div>
   <div id="night"></div>
@@ -17,7 +17,7 @@
   </div>
 </div>
 
-<!-- partial:index.partial.html -->
+<!-- Fire and Candle -->
 <div class="block1" id="block1">
   <div class="subblock1 flex-center-parent" id="blockCampfire">
     <img src="https://cdn.discordapp.com/attachments/880435893536706591/880474911536205855/fire.png" class="wood">
@@ -68,20 +68,24 @@
   </div>
 </div>
 
+<!-- Candle and Torch + smoke from oil lamp -->
 <div class="block2" id="block2" >
   <div class="wax mr-auto" id="candleWax"></div>
-  <img src="https://imgur.com/eTX262G.png" class="queenOfFreedom" id="queen">
-  <img src="https://www.transparentpng.com/thumb/smoke/sVXDt7-smoke-high-quality.png" class="smoke" id="smoke">
+  <img src="https://i.imgur.com/GEXAs9T.png" class="queenOfFreedom" id="queen">
+  <img src="https://i.imgur.com/9QPzU7w.png" class="smoke" id="smoke">
 </div>
 
+<!-- Oil Lamp -->
 <div class="block3" id="block3">
   <img src="https://i.imgur.com/btRznZS.png" id="oillamp">
 </div>
 
+<!-- space between Oil Lamp and Prism -->
 <div class="block4">
   <div class="transperent" id="space"></div>
 </div>
 
+<!-- Prism -->
 <div class="block5" id="block5">
   <div class="contain" id="prism">
     <div class="black" id="black">
@@ -100,10 +104,12 @@
   </div>
 </div>
 
+<!-- space between Prism and Gas Lamp -->
 <div class="block6">
   <div class="transperent"></div>
 </div>
 
+<!-- Gas Lamp -->
 <div class="block7">
     <a-scene embedded>
       <a-sky color="hsl(260,100%,5%)"></a-sky>
@@ -151,12 +157,27 @@
                  easing: easeInOutQuad; 
                  dir: alternate;"></a-entity>
        </a-scene>  
+</div> 
+
+<div class="block8" id="block8">
+  <div class="transperent" id="space2"></div>
+  <div class="container flex-center-parent">
+      <div class="lightneon" id="lightneon"></div>
+      <image src="https://cdn.discordapp.com/attachments/888248638235627520/894168394763489300/bulb_top-removebg-preview.png" width="9%" id="lightbulb">
+      <image src="https://cdn.discordapp.com/attachments/888248638235627520/894168414082433034/bulb_bot-removebg-preview.png" width="9%" id="bulbbase">
+      <div class="lightline" id="lightline"></div>
+      <div class="ledbulb" id="ledbulb"></div>
+
+
+  </div>
 </div>
+
 
 <!-- <div id="post"> -->
 <div id="post" >
   Y = <span id="yyy">0</span>
 </div>
+
 <!-- partial -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js'></script>

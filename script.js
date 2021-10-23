@@ -9,16 +9,15 @@ document.body.onscroll = function () {
   let prism = document.getElementById("prism");
   let light1 = document.getElementById("light1");
   let lightspec = document.getElementsByClassName("light");
+  let space2 = document.getElementById("space2");
   
   let block1 = document.getElementById("block1");
   let blockCamp = document.getElementById("blockCampfire");
-  let blockCandle = document.getElementById("blockCandle");
   let block2 = document.getElementById("block2");
   let block5 = document.getElementById("block5");
-
+  let block8 = document.getElementById("block8");
 
   let blockOffTAndCampOffW = block1.offsetTop + blockCamp.offsetWidth;
-
 
   document.querySelector("#yyy").innerText = scrollY;
   document.body.style.setProperty("--scrollY", scrollY);
@@ -95,56 +94,72 @@ document.body.onscroll = function () {
   }
 
 // opacity smoke
-if(scrollY >= queen.offsetTop){
-  document.getElementById("smoke").style.opacity = 1;
-}
-else{
-  document.getElementById("smoke").style.opacity = 0;
-}
+  if(scrollY >= queen.offsetTop){
+    document.getElementById("smoke").style.opacity = 1;
+  }
+  else{
+    document.getElementById("smoke").style.opacity = 0;
+  }
 
 // opacity black
-if(scrollY >= block5.offsetTop){
-  prism.style.opacity = 1;
-  
-}else{
-  prism.style.opacity = 0;
-}
+  if(scrollY >= block5.offsetTop){
+    prism.style.opacity = 1;
+  }else{
+    prism.style.opacity = 0;
+  }
 
-// prism
-if(scrollY < block5.offsetTop){
-  light1.style.width = "0px";
-}
-if(scrollY >= block5.offsetTop && scrollY < block5.offsetTop + 700){
-  light1.style.width = "calc( ((var(--scrollY) - var(--prismTop)) * 1px) + 1px)";
-}
-if(scrollY < block5.offsetTop + 1000){
-  lightspec[0].style.width = "0px";
-  lightspec[1].style.width = "0px";
-  lightspec[2].style.width = "0px";
-  lightspec[3].style.width = "0px";
-  lightspec[4].style.width = "0px";
-  lightspec[5].style.width = "0px";
-  lightspec[6].style.width = "0px";
-}
-if(scrollY >= block5.offsetTop + 700 && scrollY < block5.offsetTop + 3000){
-  light1.style.width = "50%";
-  lightspec[0].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-  lightspec[1].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-  lightspec[2].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-  lightspec[3].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-  lightspec[4].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-  lightspec[5].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-  lightspec[6].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-}
-if(scrollY >= block5.offsetTop + 3000){
-  lightspec[0].style.width = "60%";
-  lightspec[1].style.width = "60%";
-  lightspec[2].style.width = "60%";
-  lightspec[3].style.width = "60%";
-  lightspec[4].style.width = "60%";
-  lightspec[5].style.width = "60%";
-  lightspec[6].style.width = "60%";
-}
+// prism width increase ad reduce
+  if(scrollY >= block5.offsetTop && scrollY < block5.offsetTop + 900){
+    light1.style.width = "calc( ((var(--scrollY) - var(--prismTop)) * 0.05%)";
+  }
+  if(scrollY >= block5.offsetTop + 1000 && scrollY < block5.offsetTop + 3000){
+    light1.style.width = "50%";
+    lightspec[0].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
+    lightspec[1].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
+    lightspec[2].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
+    lightspec[3].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
+    lightspec[4].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
+    lightspec[5].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
+    lightspec[6].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
+  }
+  if(scrollY >= block5.offsetTop + 3000){
+    lightspec[0].style.width = "60%";
+    lightspec[1].style.width = "60%";
+    lightspec[2].style.width = "60%";
+    lightspec[3].style.width = "60%";
+    lightspec[4].style.width = "60%";
+    lightspec[5].style.width = "60%";
+    lightspec[6].style.width = "60%";
+  }
+
+// light bulb and 
+  if(scrollY < block8.offsetTop + space2.offsetHeight){
+    document.getElementById("lightneon").style.boxShadow = "0 0 50px 10px #fae30e";
+  }
+  if(scrollY >= block8.offsetTop + space2.offsetHeight){
+    document.getElementById("lightline").style.width =  "5.25vw";
+    document.getElementById("lightneon").style.animation = "effect1 1 2s";
+    document.getElementById("lightneon").style.boxShadow = "0 0 300px 60px #fae30e";
+  }
+  else{
+    document.getElementById("lightline").style.width =  "0vw";
+    document.getElementById("lightneon").style.animation = "effect2 1 2s";
+  }
+
+  if(scrollY >= block8.offsetTop + space2.offsetHeight + 500 && scrollY <= block8.offsetTop + space2.offsetHeight + 1500){
+    document.getElementById("lightline").style.opacity = "calc( 1 - ((var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 500) +") * 0.001))";
+    document.getElementById("lightneon").style.opacity = "calc( 1 - ((var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 500) +") * 0.001))";
+    document.getElementById("lightbulb").style.opacity = "calc( 1 - ((var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 500) +") * 0.001))";
+  }
+  if(scrollY > block8.offsetTop + space2.offsetHeight + 1500){
+    document.getElementById("lightline").style.opacity = 0;
+    document.getElementById("lightneon").style.opacity = 0;
+    document.getElementById("lightbulb").style.opacity = 0;
+  }
+  if(scrollY >= block8.offsetTop + space2.offsetHeight + 1500 && scrollY <= block8.offsetTop + space2.offsetHeight + 2500){
+    document.getElementById("ledbulb").style.opacity = "calc( ((0 + var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 1500) +") * 0.001))";
+  }
+
 };
 
 var vwWidth = window.innerWidth;
