@@ -1,3 +1,4 @@
+
 let next = document.querySelector("#f1");
 let book = document.getElementById("book");
 let start = document.getElementById("btn-start");
@@ -34,9 +35,27 @@ function goNextPage() {
 function goToBook() {
   document.querySelector("#first-page").style.display = "none";
   book.style.display = "flex";
-  
 }
 
+var vwWidth = window.innerWidth;
+var controller = new ScrollMagic.Controller();
+
+//for horizontal scrolling
+var horizontalSlide = new TimelineMax()
+  .to(".block1", 0.2, { x: 0, ease: Power1.easeOut })
+  .to(".block1", 1, { x: -vwWidth, ease: Power1.easeOut })
+  .to(".block1", 0.2, { x: -vwWidth, ease: Power1.easeOut });
+
+new ScrollMagic.Scene({
+  triggerElement: ".block1",
+  duration: "350%",
+  offset: 0,
+  triggerHook: -0.02
+})
+  .setPin(".block1")
+  .setTween(horizontalSlide)
+  .addTo(controller);
+  
 document.body.onscroll = function () {
   let scrollY = window.scrollY;
 
@@ -81,8 +100,8 @@ document.body.onscroll = function () {
 
 // reduce opacity mountain and campfire
   if(scrollY >= blockOffTAndCampOffW + 500){
-    document.querySelector("#land").style.opacity = "calc( 1 - ((var(--scrollY) - 3000) * 0.001))";
-    document.getElementsByClassName("fire-sub")[0].style.opacity = "calc( 0 + ((var(--scrollY) - 3500) * 0.001))";
+    document.querySelector("#land").style.opacity = "calc( 1 - ((var(--scrollY) - 4000) * 0.001))";
+    document.getElementsByClassName("fire-sub")[0].style.opacity = "calc( 0 + ((var(--scrollY) - 4500) * 0.001))";
   }
 
 // change position mountain from fixed to static 
@@ -152,25 +171,17 @@ document.body.onscroll = function () {
   }
   if(scrollY >= block5.offsetTop + 1000 && scrollY < block5.offsetTop + 3000){
     light1.style.width = "50%";
-    lightspec[0].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-    lightspec[1].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-    lightspec[2].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-    lightspec[3].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-    lightspec[4].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-    lightspec[5].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
-    lightspec[6].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
+    for (let i = 0; i < 7; i++) {
+      lightspec[i].style.width = "calc( ((var(--scrollY) - " + (block5.offsetTop + 900) + ") * 1px) + 1px)";
+    }
   }
   if(scrollY >= block5.offsetTop + 3000){
-    lightspec[0].style.width = "60%";
-    lightspec[1].style.width = "60%";
-    lightspec[2].style.width = "60%";
-    lightspec[3].style.width = "60%";
-    lightspec[4].style.width = "60%";
-    lightspec[5].style.width = "60%";
-    lightspec[6].style.width = "60%";
+    for (let j = 0; j < 7; j++) {
+      lightspec[j].style.width = "60%";
+    }
   }
 
-// light bulb and 
+// light bulb 
   if(scrollY < block8.offsetTop + space2.offsetHeight){
     document.getElementById("lightneon").style.boxShadow = "0 0 50px 10px #fae30e";
   }
@@ -184,37 +195,43 @@ document.body.onscroll = function () {
     document.getElementById("lightneon").style.animation = "effect2 1 2s";
   }
 
-  if(scrollY >= block8.offsetTop + space2.offsetHeight + 500 && scrollY <= block8.offsetTop + space2.offsetHeight + 1500){
-    document.getElementById("lightline").style.opacity = "calc( 1 - ((var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 500) +") * 0.001))";
-    document.getElementById("lightneon").style.opacity = "calc( 1 - ((var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 500) +") * 0.001))";
-    document.getElementById("lightbulb").style.opacity = "calc( 1 - ((var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 500) +") * 0.001))";
+  if(scrollY >= block8.offsetTop + space2.offsetHeight + 1500 && scrollY <= block8.offsetTop + space2.offsetHeight + 2500){
+    document.getElementById("lightline").style.opacity = "calc( 1 - ((var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 1500) +") * 0.001))";
+    document.getElementById("lightneon").style.opacity = "calc( 1 - ((var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 1500) +") * 0.001))";
+    document.getElementById("lightbulb").style.opacity = "calc( 1 - ((var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 1500) +") * 0.001))";
   }
-  if(scrollY > block8.offsetTop + space2.offsetHeight + 1500){
+  if(scrollY > block8.offsetTop + space2.offsetHeight + 2500){
     document.getElementById("lightline").style.opacity = 0;
     document.getElementById("lightneon").style.opacity = 0;
     document.getElementById("lightbulb").style.opacity = 0;
   }
-  if(scrollY >= block8.offsetTop + space2.offsetHeight + 1500 && scrollY <= block8.offsetTop + space2.offsetHeight + 2500){
-    document.getElementById("ledbulb").style.opacity = "calc( ((0 + var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 1500) +") * 0.001))";
+
+  // led light
+  if(scrollY >= block8.offsetTop + space2.offsetHeight + 2500 && scrollY <= block8.offsetTop + space2.offsetHeight + 3500){
+    document.getElementById("ledbulb").style.opacity = "calc( ((0 + var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 2500) +") * 0.001))";
+  }
+  if(scrollY >= block8.offsetTop + space2.offsetHeight + 3500 && scrollY <= block8.offsetTop + space2.offsetHeight + 5000){
+    document.getElementById("ledbulb").style.top = "27%";
+    document.getElementById("bulbbase").style.opacity = 1;
+    document.getElementById("ledbulb").style.opacity = 1;
+    document.getElementById("ledbulb").style.transform = "scale(1, 1)";
   }
 
+  if(scrollY >= block8.offsetTop + space2.offsetHeight + 5000 && scrollY <= block8.offsetTop + space2.offsetHeight + 6000){
+    document.getElementById("ledbulb").style.transform = "scale(5, 0.15)";
+    document.getElementById("ledbulb").style.top = "35%";
+    document.getElementById("bulbbase").style.opacity = "calc( ((1 - var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 5000) +") * 0.001))";
+    document.getElementById("ledbulb").style.opacity = 1;
+   }
+
+   if(scrollY >= block8.offsetTop + space2.offsetHeight + 6000 && scrollY <= block8.offsetTop + space2.offsetHeight + 7000){
+    document.getElementById("bulbbase").style.opacity = 0;
+    document.getElementById("ledbulb").style.opacity = "calc( ((1 - var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 6000) +") * 0.001))";
+    document.getElementById("flu_img").style.opacity = "calc( ((0 + var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 6000) +") * 0.001))";
+   }
+
+   if(scrollY >= block8.offsetTop + space2.offsetHeight + 7000 && scrollY <= block8.offsetTop + space2.offsetHeight + 8500){
+    document.getElementById("flu_img").style.opacity = 1;
+   }
+
 };
-
-var vwWidth = window.innerWidth;
-var controller = new ScrollMagic.Controller();
-
-//for horizontal scrolling
-var horizontalSlide = new TimelineMax()
-  .to(".block1", 0.2, { x: 0, ease: Power1.easeOut })
-  .to(".block1", 1, { x: -vwWidth, ease: Power1.easeOut })
-  .to(".block1", 0.2, { x: -vwWidth, ease: Power1.easeOut });
-
-new ScrollMagic.Scene({
-  triggerElement: ".block1",
-  duration: "350%",
-  offset: 0,
-  triggerHook: -0.02
-})
-  .setPin(".block1")
-  .setTween(horizontalSlide)
-  .addTo(controller);

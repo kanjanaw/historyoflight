@@ -103,7 +103,7 @@ a-scene {
 }
 .block8{
   background: black;
-  height: 800vh;
+  height: 1500vh;
   width: 100vw;
   display: flex;
   align-items: flex-start;
@@ -449,8 +449,9 @@ a-scene {
   height: 100vh;
   flex-direction: column;
 }
-#basebulb{
+#bulbbase{
   z-index: auto;
+  transition: 2s;
 }
 .lightline {
   width: 0vw;
@@ -497,6 +498,7 @@ a-scene {
   border-radius: 50% 50% 40% 40% / 60% 60% 30% 30%;
   opacity: 0;
   animation: shine 1s infinite alternate;
+  transition: 2s;
 }
 @keyframes shine {
   from {
@@ -668,4 +670,22 @@ a-scene {
   #eeeeee,
  #9be2fe
    );
+}
+#flu_img{
+  z-index: auto;
+  position: absolute;
+  top: 49%;
+  opacity: 0;
+  animation: flu_shine 0.001s infinite alternate;
+}
+
+@keyframes flu_shine {
+  from {
+    box-shadow: 0 0 40px hsl( 10, 100%, 100%),
+      inset 0 0 30px 15px hsl(10, 100%, 100%);
+  }
+  to {
+    box-shadow: 0 0 20px hsl(10, 100%, 100%),
+      inset 0 0 15px 8px hsl(10, 100%, 100%);
+  }
 }
