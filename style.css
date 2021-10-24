@@ -39,6 +39,11 @@ a-scene {
   );
   color: white;
 }
+.block0{
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
 .block1 {
   display: flex;
   height: 100vh;
@@ -48,7 +53,6 @@ a-scene {
 .subblock1 {
   z-index: auto;
 }
-
 .block2 {
   height: 100%;
   width: 100vw;
@@ -99,7 +103,7 @@ a-scene {
 }
 .block8{
   background: black;
-  height: 1000vh;
+  height: 800vh;
   width: 100vw;
   display: flex;
   align-items: flex-start;
@@ -115,19 +119,16 @@ a-scene {
   justify-content: center;
   align-items: center;
 }
-
 .flex-center-start-parent {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-
 .flex-center-end-parent {
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
-
 .campfire {
   text-align: center;
   justify-content: center;
@@ -141,7 +142,6 @@ a-scene {
   position: absolute;
   bottom: 4%;
 }
-
 .bonfire {
   position: absolute;
   z-index: auto;
@@ -151,7 +151,6 @@ a-scene {
   justify-content: center;
   display: flex;
 }
-
 .line {
   width: calc(var(--size) * var(--k) * 0.2);
   height: calc(var(--height) * var(--k));
@@ -161,12 +160,10 @@ a-scene {
   background-color: hsl(calc(var(--j) * 40), 100%, 50%);
   animation: ani calc(1.5s) calc(0.314159256s * var(--k)) infinite linear;
 }
-
 #white {
   box-shadow: 0px 0px 30px hsl(60, 100%, 70%);
   background-color: hsl(60, 100%, 80%);
 }
-
 @keyframes ani {
   0% {
     height: calc(var(--height) * var(--k));
@@ -278,7 +275,6 @@ a-scene {
   position: absolute;
   animation: filcker 3ms ease-in infinite;
 }
-
 .mr-auto {
   margin: auto;
 }
@@ -327,11 +323,7 @@ a-scene {
   margin-top: 300px;
   padding-bottom: 300px;
   align-self: flex-end; 
-  
-
 }
-
-
 #post {
   width: 400px;
   height: 50px;
@@ -341,7 +333,6 @@ a-scene {
   left: 0;
   background: #aaac;
 }
-
 #day {
   position: relative;
   width: 100%;
@@ -354,21 +345,18 @@ a-scene {
   min-height: 200vh;
 }
 #land {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: auto;
   opacity: 1;
 }
-
 .star{
   z-index:auto;
   background-image: url("https://static.typingclub.com/m/tpmedia/img/sky2.png");
   width: 100vw;
   height: 100vh;
 }
-
 .smoke{
   z-index: auto;
   display: block;
@@ -398,7 +386,6 @@ a-scene {
   z-index: 1;
   place-self: center;
 }
-
 #light1{
   z-index: auto;
   width: 0px;
@@ -407,7 +394,6 @@ a-scene {
   position: absolute;
   place-self: center start;
 }
-
 .light{
   width: 0px;
   height:6vh;
@@ -442,7 +428,6 @@ a-scene {
 #purple{
   background:magenta;
 }
-
 .contain{
   top: 0;
   position: sticky;
@@ -451,7 +436,6 @@ a-scene {
   transition: .8s;
   opacity: 0;
 }
-
 #space2{
   background: linear-gradient(
     #080019,
@@ -479,7 +463,6 @@ a-scene {
   border-radius: 20px;
   transition: 2s;
 }
-
 .lightneon{
   width: 5.25vw;
   height: 8px;
@@ -497,7 +480,6 @@ a-scene {
     box-shadow: 0 0 300px 60px #fae30e;
   }
 }
-
 @keyframes effect2 {
   from{
     box-shadow: 0 0 300px 60px #fae30e;
@@ -505,19 +487,17 @@ a-scene {
     box-shadow: 0 0 50px 10px #fae30e;
   }
 }
-
 .ledbulb{
   width: 9%;
   height: 34%;
   background: rgba(240, 240, 240, 1);
-  z-index: auto;
   position: absolute;
+  z-index: auto;
   top: 27%;
   border-radius: 50% 50% 40% 40% / 60% 60% 30% 30%;
   opacity: 0;
   animation: shine 1s infinite alternate;
 }
-
 @keyframes shine {
   from {
     box-shadow: 0 0 90px rgba(255, 255, 213, 0.5), 0 0 40px rgba(255, 255, 213, 0.5),
@@ -527,4 +507,165 @@ a-scene {
     box-shadow: 0 0 50px rgba(255, 255, 213, 0.5), 0 0 30px rgba(255, 255, 213, 0.5),
       inset 0 0 28px 15px rgba(255, 255, 213, 0.5);
   }
+}
+
+.first-page{
+  width: 100%;
+  height: 100%;
+}
+
+.border{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 5px solid white;
+  position: relative;
+  animation: scale1 2s linear infinite;
+  animation-delay: .2s;
+}
+@keyframes scale1{
+  0%{
+      transform: scale(0.5);
+  }
+  25%{
+      transform: scale(1);
+  }
+  60%{
+      transform: scale(1.2);
+  }
+  80%{
+      transform: scale(1);
+  }
+  100%{
+      transform: scale(0.5);
+  }
+}
+.btn-start{
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: white;
+  box-shadow: 0 0 50px white;
+  cursor: pointer;
+  animation: beat 2s linear infinite;
+}
+@keyframes beat{
+  0%{
+      transform: scale(1);
+  }
+  25%{
+      transform: scale(1.5);
+  }
+  60%{
+      transform: scale(2.0);
+  }
+  80%{
+      transform: scale(1.5);
+  }
+  100%{
+      transform: scale(1);
+  }
+}
+.start{
+  margin: 1.2em;
+  font-size: 2em;
+  font-weight: 500;
+  color: white;
+}
+.book {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  transition: transform 0.5s;
+  display: none;
+  color: white;
+  animation: fade-in 2s linear; 
+}
+@keyframes fade-in{
+  0%{
+      opacity: 0;
+  }
+  50%{
+      opacity: 0.5;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+.paper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
+
+}
+.front,
+.back {
+  background-color: black;
+  border: 5px solid white;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 1.5s;
+}
+.front {
+  z-index: 1;
+  backface-visibility: hidden;
+  border-left: 5px solid black;
+}
+.back {
+  z-index: 0;
+}
+.front-content,
+.back-content {
+  width: 100%;
+  height: 100%;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+
+}
+.back-content {
+  transform: rotateY(180deg)
+}
+.book-name{
+  font-size: 2.5em;
+  font-weight: 500;
+  margin: 1.5em;
+  text-align: center;
+}
+.genesis{
+  font-size: 1.1em;
+  font-weight: 500;
+  margin: 1em;
+  text-align: center;
+}
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+  transform: rotateY(-180deg);
+}
+#f1{
+  cursor: pointer;
+}
+#p1 {
+  z-index: 3;
+}
+#p2 {
+  z-index: 2;
+}
+#nighttoday{
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+  #000,
+  #eeeeee,
+ #9be2fe
+   );
 }

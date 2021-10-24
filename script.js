@@ -1,3 +1,42 @@
+let next = document.querySelector("#f1");
+let book = document.getElementById("book");
+let start = document.getElementById("btn-start");
+let paper1 = document.querySelector("#p1");
+
+// Event Listener
+next.addEventListener("click", goNextPage);
+start.addEventListener("click", goToBook);
+
+// Business Logic
+let currentLocation = 1;
+let numOfPapers = 2;
+let maxLocation = numOfPapers + 1;
+
+function openBook() {
+  book.style.transform = "translateX(50%)";
+}
+
+function goNextPage() {
+  if (currentLocation < maxLocation) {
+    switch (currentLocation) {
+      case 1:
+        openBook();
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = 1;
+        break;
+      default:
+        throw new Error("unkown state");
+    }
+    currentLocation++;
+  }
+}
+
+function goToBook() {
+  document.querySelector("#first-page").style.display = "none";
+  book.style.display = "flex";
+  
+}
+
 document.body.onscroll = function () {
   let scrollY = window.scrollY;
 
@@ -11,6 +50,7 @@ document.body.onscroll = function () {
   let lightspec = document.getElementsByClassName("light");
   let space2 = document.getElementById("space2");
   
+  let blockSunstar = document.getElementById("blockSunstar");
   let block1 = document.getElementById("block1");
   let blockCamp = document.getElementById("blockCampfire");
   let block2 = document.getElementById("block2");
@@ -24,31 +64,29 @@ document.body.onscroll = function () {
   document.body.style.setProperty("--h", scrollY / 10);
   document.body.style.setProperty("--prismTop", block5.offsetTop);
 
+
 // change #night bg, #land bg & opacity fire candle
   if (scrollY >= night.offsetTop) {
     document.querySelector("#night").style.backgroundImage =
       "url('https://static.typingclub.com/m/tpmedia/img/sky2.png')";
-
     document.querySelector("#land").src =
       "https://cdn.discordapp.com/attachments/884365403856437268/886639421183651890/image2D.png";
   } 
   else {
     document.querySelector("#land").src =
       "https://cdn.discordapp.com/attachments/884365403856437268/886639423658274846/image2L.png";
-
-    document.querySelector("#night").style.backgroundImage = "url('')";
-  
+    document.querySelector("#night").style.backgroundImage = "url('')";  
     document.getElementsByClassName("fire-sub")[0].style.opacity = "0";
   }
 
 // reduce opacity mountain and campfire
   if(scrollY >= blockOffTAndCampOffW + 500){
-    document.querySelector("#land").style.opacity = "calc( 1 - ((var(--scrollY) - 2000) * 0.001))";
-    document.getElementsByClassName("fire-sub")[0].style.opacity = "calc( 0 + ((var(--scrollY) - 2800) * 0.001))";
+    document.querySelector("#land").style.opacity = "calc( 1 - ((var(--scrollY) - 3000) * 0.001))";
+    document.getElementsByClassName("fire-sub")[0].style.opacity = "calc( 0 + ((var(--scrollY) - 3500) * 0.001))";
   }
 
-// change position mountain from fixed to static
-  if(scrollY >= block2.offsetTop){
+// change position mountain from fixed to static 
+  if(scrollY <= blockSunstar.offsetTop || scrollY >= block2.offsetTop){
     document.querySelector("#land").style.position = "static";
   }
   else{

@@ -5,9 +5,50 @@
   <title>The History of Light</title>
   <link rel="stylesheet" href="./style.css">
   <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<!-- book -->
+<div class="block0 flex-center-parent" id="block0">
+  <div class="first-page flex-center-parent" id="first-page">
+    <div class="border flex-center-parent">
+      <div class="btn-start" id="btn-start"></div>
+    </div>
+    <h2 class="start">Tap to start</h2>
+  </div>
+
+  <!-- Book -->
+  <div id="book" class="book">
+    <!-- Paper 1 -->
+    <div id="p1" class="paper">
+      <div class="front">
+        <div id="f1" class="front-content flex-center-parent">
+          <h1 class="book-name">The Book<br>of<br>Genesis</h1>
+        </div>
+      </div>
+      <div class="back">
+        <div id="b1" class="back-content flex-center-parent">
+          <h3 class="genesis">ในปฐมกาล<br>พระเจ้าทรงสร้างทุกสิ่ง<br>ในฟ้าสวรรค์และโลก<br>ขณะนั้นโลกยังไม่มีรูปทรงและว่างเปล่า<br>ความมืดปกคลุมอยู่เหนือ<br>พื้นผิวของห้วงน้ำ<br>พระวิญญาณของพระเจ้า<br>ทรงเคลื่อนไหวอยู่เหนือน้ำนั้น</h3>
+        </div>
+      </div>
+    </div>
+    <!-- Paper 2 -->
+    <div id="p2" class="paper">
+      <div class="front">
+        <div id="f2" class="front-content flex-center-parent">
+          <h3 class="genesis">และพระเจ้าตรัสว่า<br>“จงเกิดความสว่าง”<br>ความสว่างก็เกิดขึ้น<br>พระเจ้าทรงเห็นว่าความสว่างนั้นดี<br>และทรงแยกความสว่าง<br>ออกจากความมืด<br>พระเจ้าทรงเรียกความสว่างว่า “วัน”<br>และเรียกความมืดว่า “คืน”<br>เวลาเย็นและเวลาเช้าผ่านไป<br>นี่เป็นวันที่หนึ่ง</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- space between book and sun -->
+<div class="transperent" id="nighttoday"></div>
+
   <!-- Sun and Star -->
 <div id="blockSunstar">
   <div id="day"></div>
@@ -77,7 +118,7 @@
 
 <!-- Oil Lamp -->
 <div class="block3" id="block3">
-  <img src="https://i.imgur.com/btRznZS.png" id="oillamp">
+  <img src="https://i.imgur.com/KUDsRYY.png" id="oillamp">
 </div>
 
 <!-- space between Oil Lamp and Prism -->
@@ -90,7 +131,7 @@
   <div class="contain" id="prism">
     <div class="black" id="black">
       <div id="light1"></div>
-      <img src="https://cdn.discordapp.com/attachments/884647692456828963/884719773081038899/Untitled-1.png" id="tri" width="30%">
+      <img src="https://i.imgur.com/RKSI9UW.png" id="tri" width="30%">
       <div class="rainbow">
         <div class="light" id="red"></div>
         <div class="light" id="orange"></div>
@@ -167,8 +208,6 @@
       <image src="https://cdn.discordapp.com/attachments/888248638235627520/894168414082433034/bulb_bot-removebg-preview.png" width="9%" id="bulbbase">
       <div class="lightline" id="lightline"></div>
       <div class="ledbulb" id="ledbulb"></div>
-
-
   </div>
 </div>
 
