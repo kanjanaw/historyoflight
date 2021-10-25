@@ -230,4 +230,7 @@ document.body.onscroll = function () {
     document.getElementById("flu_img").style.opacity = 1;
    }
 
+   if(scrollY >= block8.offsetTop + space2.offsetHeight + 8500 && scrollY <= block8.offsetTop + space2.offsetHeight + 9500){
+    document.getElementById("flu_img").style.opacity = "calc( ((1 - var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 8500) +") * 0.001))";
+   }
 };
