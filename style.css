@@ -344,12 +344,26 @@ a-scene {
   width: 100%;
   min-height: 200vh;
 }
+
+@keyframes fade-in{
+  0%{
+      opacity: 0;
+  }
+  50%{
+      opacity: 0.5;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
 #land {
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: auto;
   opacity: 1;
+  animation: fade-in 2s linear;
 }
 .star{
   z-index:auto;
@@ -585,17 +599,7 @@ a-scene {
   color: white;
   animation: fade-in 2s linear; 
 }
-@keyframes fade-in{
-  0%{
-      opacity: 0;
-  }
-  50%{
-      opacity: 0.5;
-  }
-  100%{
-      opacity: 1;
-  }
-}
+
 .paper {
   position: absolute;
   width: 100%;

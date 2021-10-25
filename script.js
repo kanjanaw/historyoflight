@@ -88,12 +88,8 @@ document.body.onscroll = function () {
   if (scrollY >= night.offsetTop) {
     document.querySelector("#night").style.backgroundImage =
       "url('https://static.typingclub.com/m/tpmedia/img/sky2.png')";
-    document.querySelector("#land").src =
-      "https://cdn.discordapp.com/attachments/884365403856437268/886639421183651890/image2D.png";
   } 
   else {
-    document.querySelector("#land").src =
-      "https://cdn.discordapp.com/attachments/884365403856437268/886639423658274846/image2L.png";
     document.querySelector("#night").style.backgroundImage = "url('')";  
     document.getElementsByClassName("fire-sub")[0].style.opacity = "0";
   }
