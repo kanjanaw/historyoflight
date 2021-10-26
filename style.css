@@ -111,9 +111,9 @@ a-scene {
 }
 .block9{
   width: 100%;
-  height: 100vh;
-  background-color: #160a29;
-  overflow: hidden;
+  height: 300vh;
+  background-color: black;
+  display: flex;
 }
 .transperent {
   background: transparent;
@@ -339,6 +339,7 @@ a-scene {
   top: 0;
   left: 0;
   background: #aaac;
+  visibility: hidden;
 }
 #day {
   position: relative;
@@ -708,20 +709,12 @@ a-scene {
   margin-left: 3%;
   margin-top: 1%;
   perspective: 100px;
-  transform: rotatez(40deg) ;
-  
+  transform: rotatez(40deg);
+  opacity: 1;
+  transition: 1s;
 }
 
 .als{
-  /* width: 100%;
-  height: 80%;
-  padding: 15%;
-  position: absolute;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255,255,255,0.5) 70%, transparent);
-  transform-style: preserve-3d;
-  transform: rotatey(-45deg) ;
-  border-radius:40% 0 0 40%; */
-  
   width: 100%;
   height: 80%;
   padding: 15%;
@@ -731,3 +724,21 @@ a-scene {
   transform: rotatey(-45deg) ;
   border-radius:40% 0 0 40%;
 }
+
+#blocklight{
+  overflow: hidden;
+}
+
+/* #blockrelative [data-active="1"] {
+  perspective: 1000px;
+  height: 10px;
+  width: 0;
+  transform: rotateZ(25deg);
+  margin-top: 1%;
+  margin-left: -3%;
+} */
+/* #als [data-active="1"]{
+  width: 650%;
+  height: 20%;
+  padding: 8%;
+} */

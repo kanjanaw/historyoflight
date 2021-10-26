@@ -68,6 +68,7 @@ document.body.onscroll = function () {
   let light1 = document.getElementById("light1");
   let lightspec = document.getElementsByClassName("light");
   let space2 = document.getElementById("space2");
+  let blocklight = document.getElementById("blocklight");
   
   let blockSunstar = document.getElementById("blockSunstar");
   let block1 = document.getElementById("block1");
@@ -75,6 +76,7 @@ document.body.onscroll = function () {
   let block2 = document.getElementById("block2");
   let block5 = document.getElementById("block5");
   let block8 = document.getElementById("block8");
+  let block9 = document.getElementById("block9");
 
   let blockOffTAndCampOffW = block1.offsetTop + blockCamp.offsetWidth;
 
@@ -232,5 +234,39 @@ document.body.onscroll = function () {
 
    if(scrollY >= block8.offsetTop + space2.offsetHeight + 8500 && scrollY <= block8.offsetTop + space2.offsetHeight + 9500){
     document.getElementById("flu_img").style.opacity = "calc( ((1 - var(--scrollY) - "+ (block8.offsetTop + space2.offsetHeight + 8500) +") * 0.001))";
+   }
+   
+   //als
+   if(scrollY >= block9.offsetTop){
+     document.getElementById("blockrelative").style.opacity = 1;
+   }
+   else{
+    document.getElementById("blockrelative").style.opacity = 0;
+   }
+
+   //laser
+   if(scrollY >= block9.offsetTop + blocklight.offsetHeight + 500){
+    document.getElementById("blockrelative").style.perspective = "1000px";
+    document.getElementById("blockrelative").style.height = "10px";
+    document.getElementById("blockrelative").style.width = "";
+    document.getElementById("blockrelative").style.transform = "rotatez(25deg)";
+    document.getElementById("blockrelative").style.marginLeft = "-3%";
+
+    document.getElementById("als").style.width = "650%";
+    document.getElementById("als").style.height = "20%";
+    document.getElementById("als").style.padding = "8%";
+    document.getElementById("als").style.backgroundImage = "linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255,0,0,0.5) 70%, transparent)";
+   }
+   else{
+    document.getElementById("blockrelative").style.perspective = "100px";
+    document.getElementById("blockrelative").style.height = "200px";
+    document.getElementById("blockrelative").style.width = "200px";
+    document.getElementById("blockrelative").style.transform = "rotatez(40deg)";
+    document.getElementById("blockrelative").style.marginLeft = "3%";
+
+    document.getElementById("als").style.width = "100%";
+    document.getElementById("als").style.height = "80%";
+    document.getElementById("als").style.padding = "15%";
+    document.getElementById("als").style.backgroundImage = "linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255,255,255,0.5) 70%, transparent)";
    }
 };
