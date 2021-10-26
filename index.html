@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>The History of Light</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- book -->
+<div class="block0 flex-center-parent" id="block0">
+  <div class="first-page flex-center-parent" id="first-page">
+    <div class="border flex-center-parent">
+      <div class="btn-start" id="btn-start"></div>
+    </div>
+    <h2 class="start">Tap to start</h2>
+  </div>
+
+  <!-- Book -->
+  <div id="book" class="book">
+    <!-- Paper 1 -->
+    <div id="p1" class="paper">
+      <div class="front">
+        <div id="f1" class="front-content flex-center-parent">
+          <h1 class="book-name">The Book<br>of<br>Genesis</h1>
+        </div>
+      </div>
+      <div class="back">
+        <div id="b1" class="back-content flex-center-parent">
+          <h3 class="genesis">ในปฐมกาล<br>พระเจ้าทรงสร้างทุกสิ่ง<br>ในฟ้าสวรรค์และโลก<br>ขณะนั้นโลกยังไม่มีรูปทรงและว่างเปล่า<br>ความมืดปกคลุมอยู่เหนือ<br>พื้นผิวของห้วงน้ำ<br>พระวิญญาณของพระเจ้า<br>ทรงเคลื่อนไหวอยู่เหนือน้ำนั้น</h3>
+        </div>
+      </div>
+    </div>
+    <!-- Paper 2 -->
+    <div id="p2" class="paper">
+      <div class="front">
+        <div id="f2" class="front-content flex-center-parent">
+          <h3 class="genesis">และพระเจ้าตรัสว่า<br>“จงเกิดความสว่าง”<br>ความสว่างก็เกิดขึ้น<br>พระเจ้าทรงเห็นว่าความสว่างนั้นดี<br>และทรงแยกความสว่าง<br>ออกจากความมืด<br>พระเจ้าทรงเรียกความสว่างว่า “วัน”<br>และเรียกความมืดว่า “คืน”<br>เวลาเย็นและเวลาเช้าผ่านไป<br>นี่เป็นวันที่หนึ่ง</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- space between book and sun -->
+<div class="transperent" id="nighttoday"></div>
+
+  <!-- Sun and Star -->
+<div id="blockSunstar">
+  <div id="day"></div>
+  <div id="night"></div>
+  <div>
+    <img id="land" width="100%" src="https://i.imgur.com/C3MB5DQ.png">
+  </div>
+</div>
+
+<!-- Fire and Candle -->
+<div class="block1" id="block1">
+  <div class="subblock1 flex-center-parent" id="blockCampfire">
+    <img src="https://cdn.discordapp.com/attachments/880435893536706591/880474911536205855/fire.png" class="wood">
+    <div class="campfire">
+      <div class="bonfire" style="--j:0">
+        <div class="line" style="--k:4"></div>
+        <div class="line" style="--k:5"></div>
+        <div class="line" style="--k:6"></div>
+        <div class="line" style="--k:7"></div>
+        <div class="line" style="--k:6"></div>
+        <div class="line" style="--k:5"></div>
+        <div class="line" style="--k:4"></div>
+      </div>
+      <div class="bonfire" style="--j:1">
+        <div class="line" style="--k:3"></div>
+        <div class="line" style="--k:4"></div>
+        <div class="line" style="--k:5"></div>
+        <div class="line" style="--k:6"></div>
+        <div class="line" style="--k:5"></div>
+        <div class="line" style="--k:4"></div>
+        <div class="line" style="--k:3"></div>
+      </div>
+      <div class="bonfire" style="--j:2">
+        <div class="line" id="white" style="--k:2"></div>
+        <div class="line" id="white" style="--k:3"></div>
+        <div class="line" id="white" style="--k:4"></div>
+        <div class="line" id="white" style="--k:5"></div>
+        <div class="line" id="white" style="--k:4"></div>
+        <div class="line" id="white" style="--k:3"></div>
+        <div class="line" id="white" style="--k:2"></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="subblock1 flex-center-end-parent" id="blockCandle">
+    <div id="candle">
+      <div class="fire-sub" id="fireSub">
+        <div class="fire red"></div>
+        <div class="fire orange"></div>
+        <div class="fire gold"></div>
+        <div class="fire white"></div>
+        <div class="light-about-orange"></div>
+        <div class="light-about-gold"></div>
+      </div>
+
+      <div class="wick" id="wick"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Candle and Torch + smoke from oil lamp -->
+<div class="block2" id="block2" >
+  <div class="wax mr-auto" id="candleWax"></div>
+  <img src="https://i.imgur.com/GEXAs9T.png" class="queenOfFreedom" id="queen">
+  <img src="https://i.imgur.com/9QPzU7w.png" class="smoke" id="smoke">
+</div>
+
+<!-- Oil Lamp -->
+<div class="block3" id="block3">
+  <img src="https://i.imgur.com/KUDsRYY.png" id="oillamp">
+</div>
+
+<!-- space between Oil Lamp and Prism -->
+<div class="block4">
+  <div class="transperent" id="space"></div>
+</div>
+
+<!-- Prism -->
+<div class="block5" id="block5">
+  <div class="contain" id="prism">
+    <div class="black" id="black">
+      <div id="light1"></div>
+      <img src="https://i.imgur.com/RKSI9UW.png" id="tri" width="30%">
+      <div class="rainbow">
+        <div class="light" id="red"></div>
+        <div class="light" id="orange"></div>
+        <div class="light" id="yellow"></div>    
+        <div class="light" id="green"></div>
+        <div class="light" id="blue"></div>
+        <div class="light" id="cyan"></div>
+        <div class="light" id="purple"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- space between Prism and Gas Lamp -->
+<div class="block6">
+  <div class="transperent"></div>
+</div>
+
+<!-- Gas Lamp -->
+<div class="block7">
+    <a-scene embedded>
+      <a-sky color="hsl(260,100%,5%)"></a-sky>
+     
+       <!-- glass  -->
+     
+       <a-cylinder color="whitesmoke" height="0.5" radius="0.1" position="0 1.967 -2" opacity="0.2"></a-cylinder>
+       <a-cone color="whitesmoke" radius-bottom="0.185" radius-top="0.1" height="0.15" position="0 1.643 -2" opacity="0.2"></a-cone>
+     
+       <a-sphere radius="0.25" color="whitesmoke" position="0 1.4 -2" opacity="0.2"></a-sphere>
+     
+       <!-- fire  -->
+       <a-sphere radius="0.07" position="0 1.37 -2" color="red" emissive="red" emissiveIntensity="1" animation="property: material.emissiveIntensity; 
+                 from: 0; 
+                 to: 1; 
+                 dur: 10000; 
+                 easing: easeInOutQuad; 
+                 dir: alternate;"></a-sphere>
+       <a-sphere radius="0.09" position="0 1.36 -2" color="orange" emissive="red" emissiveIntensity="1" animation="property: material.emissiveIntensity; 
+                 from: 0; 
+                 to: 1; 
+                 dur: 10000; 
+                 easing: easeInOutQuad; 
+                 dir: alternate;"></a-sphere>
+       <a-sphere radius="0.12" position="0 1.35 -2" color="yellow" emissive="red" emissiveIntensity="1" animation="property: material.emissiveIntensity; 
+                 from: 0; 
+                 to: 1; 
+                 dur: 10000; 
+                 easing: easeInOutQuad; 
+                 dir: alternate;"></a-sphere>
+     
+       <!-- statue  -->
+       <a-cylinder color="#B8860B" height="0.2" radius="0.04" position="0 1.2 -2"></a-cylinder>
+       <a-cylinder color="#B8860B" height="0.2" radius="0.2" position="0 1.1 -2"></a-cylinder>
+       <a-cylinder color="#B8860B" height="0.1" radius="0.3" position="0 1.0 -2"></a-cylinder>
+       <a-cylinder color="#B8860B" height="0.1" radius="0.4" position="0 0.9 -2"></a-cylinder>
+       <a-cylinder color="#B8860B" height="0.2" radius="0.015" position="0.2 1.125 -2" rotation="0 0 90 "></a-cylinder>
+       <a-cylinder color="#B8860B" height="0.04" radius="0.05" position="0.3 1.125 -2" rotation="0 0 90 "></a-cylinder>
+     
+       <!-- light -->
+       <a-entity light="type: directional; color: #FFF" position="0.2 0 1" animation="property: light.intensity; 
+                 from: 0; 
+                 to: 1; 
+                 dur: 10000; 
+                 easing: easeInOutQuad; 
+                 dir: alternate;"></a-entity>
+       </a-scene>  
+</div> 
+
+<div class="block8" id="block8">
+  <div class="transperent" id="space2"></div>
+  <div class="container flex-center-parent">
+      <div class="lightneon" id="lightneon"></div>
+      <image src="https://cdn.discordapp.com/attachments/888248638235627520/894168394763489300/bulb_top-removebg-preview.png" width="9%" id="lightbulb">
+      <image src="https://cdn.discordapp.com/attachments/888248638235627520/894168414082433034/bulb_bot-removebg-preview.png" width="9%" id="bulbbase">
+      <div class="lightline" id="lightline"></div>
+      <div class="ledbulb" id="ledbulb"></div>
+      <img src="https://cdn.discordapp.com/attachments/888248638235627520/894234596730892298/LED-Tube-Light-PNG-File1.png" width="45%" id="flu_img" >
+  </div>
+</div>
+
+<div class="block9" id="block9">
+  <div class="container" id="blocklight">
+    <div class="blockrelative" id="blockrelative">
+      <div class="als" id="als"></div>
+    </div>  
+  </div>
+</div>
+
+
+<!-- <div id="post"> -->
+<div id="post" >
+  Y = <span id="yyy">0</span>
+</div>
+
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
