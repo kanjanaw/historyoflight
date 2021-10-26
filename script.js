@@ -80,7 +80,7 @@ document.body.onscroll = function () {
 
   let blockOffTAndCampOffW = block1.offsetTop + blockCamp.offsetWidth;
 
-  document.querySelector("#yyy").innerText = scrollY;
+  // document.querySelector("#yyy").innerText = scrollY;
   document.body.style.setProperty("--scrollY", scrollY);
   document.body.style.setProperty("--h", scrollY / 10);
   document.body.style.setProperty("--prismTop", block5.offsetTop);
