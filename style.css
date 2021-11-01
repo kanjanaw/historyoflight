@@ -769,7 +769,7 @@ h2{
   position: fixed;
   z-index: auto;
   height: 90px;
-  top: 7%;
+  top: 9%;
   left: 4%;
   margin: 0;
   padding: 0;
@@ -793,7 +793,8 @@ h2{
 }
 #titleCandle{
   width: 400px;
-  left: 53%;
+  left: 70%;
+  top: 40%;
 }
 #open-modal-candle{
   left: 50%;
@@ -803,15 +804,36 @@ h2{
 }
 #titleOil{
   width: 450px;
+  left: 70%;
+  top: 45%;
+  color: black;
+  border-color: black;
 }
 #titlePrism{
   width: 300px;
 }
 #titleGas{
   width: 400px;
+  top: 45%;
 }
 #titleLightB{
   width: 450px;
+}
+#titleLed{
+  width: 300px;
+}
+#titleFlu{
+  width: 450px;
+}
+#titleSpot{
+  width: 400px;
+  left: 72%;
+  top: 45%;
+}
+#titleLaser{
+  width: 300px;
+  left: 77%;
+  top: 45%;
 }
 .modal-window {
   position: fixed;

@@ -171,11 +171,40 @@ document.body.onscroll = function () {
   }
 
   //button LED
-
+  if(scrollY >= block8.offsetTop + space2.offsetHeight + 2800 && scrollY < block8.offsetTop + space2.offsetHeight + 5000){
+    document.getElementById("titleLed").style.display = "block";
+    document.getElementById("titleLed").style.opacity = 1;
+  }else{
+    document.getElementById("titleLed").style.display = "none";
+    document.getElementById("titleLed").style.opacity = 0;
+  }
 
   //button Fluo
+  if(scrollY >= block8.offsetTop + space2.offsetHeight + 6000 && scrollY < block9.offsetTop - 1000){
+    document.getElementById("titleFlu").style.display = "block";
+    document.getElementById("titleFlu").style.opacity = 1;
+  }else{
+    document.getElementById("titleFlu").style.display = "none";
+    document.getElementById("titleFlu").style.opacity = 0;
+  }
+
+  //button Spotlight
+  if(scrollY >= block9.offsetTop && scrollY < block9.offsetTop + blocklight.offsetHeight){
+    document.getElementById("titleSpot").style.display = "block";
+    document.getElementById("titleSpot").style.opacity = 1;
+  }else{
+    document.getElementById("titleSpot").style.display = "none";
+    document.getElementById("titleSpot").style.opacity = 0;
+  }
 
   //button Laser
+  if(scrollY >= block9.offsetTop + blocklight.offsetHeight + 500){
+    document.getElementById("titleLaser").style.display = "block";
+    document.getElementById("titleLaser").style.opacity = 1;
+  }else{
+    document.getElementById("titleLaser").style.display = "none";
+    document.getElementById("titleLaser").style.opacity = 0;
+  }
 
 // change #night bg, #land bg & opacity fire candle
   if (scrollY >= night.offsetTop) {
