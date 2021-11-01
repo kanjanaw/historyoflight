@@ -360,7 +360,7 @@ h2{
   top: 0;
   left: 0;
   background: #aaac;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 #day {
   position: relative;
@@ -781,6 +781,7 @@ h2{
   opacity: 0;
   transition: 1s all;
 }
+
 
 #titleSun{
   width: 300px;
