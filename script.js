@@ -80,11 +80,35 @@ document.body.onscroll = function () {
 
   let blockOffTAndCampOffW = block1.offsetTop + blockCamp.offsetWidth;
 
-  // document.querySelector("#yyy").innerText = scrollY;
+  document.querySelector("#yyy").innerText = scrollY;
   document.body.style.setProperty("--scrollY", scrollY);
   document.body.style.setProperty("--h", scrollY / 10);
   document.body.style.setProperty("--prismTop", block5.offsetTop);
 
+  if(scrollY >= blockSunstar.offsetTop - 100 && scrollY < blockSunstar.offsetTop + 600){
+    document.getElementById("titleSun").style.display = "block";
+    document.getElementById("titleSun").style.opacity = 1;
+  }else{
+    document.getElementById("titleSun").style.display = "none";
+    document.getElementById("titleSun").style.opacity = 0;
+  }
+
+  if(scrollY >= blockSunstar.offsetTop + 600 && scrollY < blockSunstar.offsetTop + 1700){
+    document.getElementById("titleMoonStar").style.display = "block";
+    document.getElementById("titleMoonStar").style.opacity = 1;
+  }else{
+    document.getElementById("titleMoonStar").style.display = "none";
+    document.getElementById("titleMoonStar").style.opacity = 0;
+  }
+
+  if(scrollY >= blockSunstar.offsetTop + 1700 && scrollY < block2.offsetTop){
+    document.getElementById("titleCamp").style.display = "block";
+    document.getElementById("titleCamp").style.opacity = 1;
+  }else{
+    document.getElementById("titleCamp").style.display = "none";
+    document.getElementById("titleCamp").style.opacity = 0;
+  }
+  
 
 // change #night bg, #land bg & opacity fire candle
   if (scrollY >= night.offsetTop) {
@@ -132,6 +156,15 @@ document.body.onscroll = function () {
   }
   if(scrollY >= queen.offsetTop - 350){
     candle.style.transform = "scale(0.33) translateY(2050px) translateX(-15.25%)";
+    document.getElementById("titleTorch").style.display = "block";
+    document.getElementById("titleTorch").style.opacity = 1;
+  }else if(scrollY >= block5.offsetTop - 1000){
+    document.getElementById("titleTorch").style.display = "none";
+    document.getElementById("titleTorch").style.opacity = 0;
+  }
+  else{
+    document.getElementById("titleTorch").style.display = "none";
+    document.getElementById("titleTorch").style.opacity = 0;
   }
 
 // opacity wax candle & wick candle

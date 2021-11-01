@@ -10,6 +10,10 @@ body {
   overflow-x: hidden;
   background-color: #271149;
 }
+a{
+  color: inherit;
+  text-decoration: none;
+}
 div {
   margin: 0;
   padding: 0;
@@ -19,6 +23,13 @@ div {
 a-scene {
   height: 50%;
   width: 50%;
+}
+h1{
+  font-family: 'Rozha One', serif;
+  font-size: 4rem;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
 }
 #blockSunstar{
   height: 200vh;
@@ -38,6 +49,7 @@ a-scene {
     #271149
   );
   color: white;
+  position: relative;
 }
 .block0{
   height: 100vh;
@@ -339,7 +351,7 @@ a-scene {
   top: 0;
   left: 0;
   background: #aaac;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 #day {
   position: relative;
@@ -742,3 +754,105 @@ a-scene {
   height: 20%;
   padding: 8%;
 } */
+
+.bg-title{
+  color: white;
+  position: fixed;
+  z-index: auto;
+  height: 90px;
+  top: 7%;
+  left: 4%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border: solid 1px white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  opacity: 0;
+  transition: 1s all;
+}
+
+#titleSun{
+  width: 300px;
+}
+#titleMoonStar{
+  width: 550px;
+}
+#titleCamp{
+  width: 400px;
+}
+#titleCandle{
+  width: 400px;
+  left: 53%;
+  display: block;
+  opacity: 1;
+}
+#open-modal-candle{
+  left: 50%;
+}
+#titleTorch{
+  width: 350px;
+}
+.modal-window {
+  position: fixed;
+  background-color: rgba(80, 80, 80, 0.25);
+  backdrop-filter: blur(8px);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-window > div {
+  width:28%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2.5em;
+  background: white;
+}
+.modal-window header {
+  font-weight: bold;
+}
+.modal-window p {
+  font-size: 1.1rem;
+  text-indent: 3em;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+}
+.modal-close {
+  font-family: 'Rozha One', serif;
+  color: #aaa;
+  line-height: 50px;
+  font-size: 100%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 80px;
+  text-decoration: none;
+}
+.modal-close:hover {
+  color: black;
+}
+.modal-window > div {
+  border-radius: 1rem;
+  color: black;
+}
+.modal-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+small {
+  color: lightgray;
+}
