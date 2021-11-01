@@ -1,4 +1,4 @@
-
+// Intro Book
 let next = document.querySelector("#f1");
 let book = document.getElementById("book");
 let start = document.getElementById("btn-start");
@@ -37,6 +37,8 @@ function goToBook() {
   book.style.display = "flex";
 }
 
+
+// scrolling horizontal
 var vwWidth = window.innerWidth;
 var controller = new ScrollMagic.Controller();
 
@@ -55,7 +57,8 @@ new ScrollMagic.Scene({
   .setPin(".block1")
   .setTween(horizontalSlide)
   .addTo(controller);
-  
+ 
+// scrolling action
 document.body.onscroll = function () {
   let scrollY = window.scrollY;
 
@@ -79,6 +82,7 @@ document.body.onscroll = function () {
   let block7 = document.getElementById("block7");
   let block8 = document.getElementById("block8");
   let block9 = document.getElementById("block9");
+  let block10 = document.getElementById("block10");
 
   let blockOffTAndCampOffW = block1.offsetTop + blockCamp.offsetWidth;
 
@@ -198,7 +202,7 @@ document.body.onscroll = function () {
   }
 
   //button Laser
-  if(scrollY >= block9.offsetTop + blocklight.offsetHeight + 500){
+  if(scrollY >= block9.offsetTop + blocklight.offsetHeight + 500 && scrollY < block10.offsetTop - 150){
     document.getElementById("titleLaser").style.display = "block";
     document.getElementById("titleLaser").style.opacity = 1;
   }else{
@@ -390,3 +394,51 @@ document.body.onscroll = function () {
     document.getElementById("als").style.backgroundImage = "linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255,255,255,0.5) 70%, transparent)";
    }
 };
+
+// Outro Book
+// const nextBtn = document.querySelector("#next-btn");
+// const book2 = document.querySelector("#book2");
+
+// const pp1 = document.querySelector("#pp1");
+// const pp2 = document.querySelector("#pp2");
+// const pp3 = document.querySelector("#pp3");
+
+// // Event Listener
+
+// nextBtn.addEventListener("click", goNextPage2);
+
+// // Business Logic
+// let currentLocation = 1;
+// let numOfPapers = 3;
+// let maxLocation = numOfPapers + 1;
+
+// function closeBook2(isAtBeginning) {
+//   if (isAtBeginning) {
+//     book2.style.transform = "translateX(0%)";
+//   } else {
+//     book2.style.transform = "translateX(100%)";
+//   }
+//   nextBtn.style.transform = "translateX(0px)";
+// }
+
+// function goNextPage2() {
+//   if (currentLocation < maxLocation) {
+//     switch (currentLocation) {
+//       case 1:
+//         pp2.classList.add("flipped");
+//         pp2.style.zIndex = 2;
+//         break;
+//       case 2:
+//         pp3.classList.add("flipped");
+//         pp3.style.zIndex = 3;
+//         nextBtn.remove();
+//         closeBook2(false);
+//         break;
+//       default:
+//         throw new Error("unkown state");
+//     }
+//     currentLocation++;
+//   }
+// }
+
+
