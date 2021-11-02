@@ -1,4 +1,4 @@
-
+// Intro Book
 let next = document.querySelector("#f1");
 let book = document.getElementById("book");
 let start = document.getElementById("btn-start");
@@ -37,6 +37,8 @@ function goToBook() {
   book.style.display = "flex";
 }
 
+
+// scrolling horizontal
 var vwWidth = window.innerWidth;
 var controller = new ScrollMagic.Controller();
 
@@ -55,7 +57,8 @@ new ScrollMagic.Scene({
   .setPin(".block1")
   .setTween(horizontalSlide)
   .addTo(controller);
-  
+ 
+// scrolling action
 document.body.onscroll = function () {
   let scrollY = window.scrollY;
 
@@ -69,22 +72,143 @@ document.body.onscroll = function () {
   let lightspec = document.getElementsByClassName("light");
   let space2 = document.getElementById("space2");
   let blocklight = document.getElementById("blocklight");
+  let smoke = document.getElementById("smoke");
   
   let blockSunstar = document.getElementById("blockSunstar");
   let block1 = document.getElementById("block1");
   let blockCamp = document.getElementById("blockCampfire");
   let block2 = document.getElementById("block2");
   let block5 = document.getElementById("block5");
+  let block7 = document.getElementById("block7");
   let block8 = document.getElementById("block8");
   let block9 = document.getElementById("block9");
+  let block10 = document.getElementById("block10");
 
   let blockOffTAndCampOffW = block1.offsetTop + blockCamp.offsetWidth;
 
-  // document.querySelector("#yyy").innerText = scrollY;
+  document.querySelector("#yyy").innerText = scrollY;
   document.body.style.setProperty("--scrollY", scrollY);
   document.body.style.setProperty("--h", scrollY / 10);
   document.body.style.setProperty("--prismTop", block5.offsetTop);
 
+  // button Sun
+  if(scrollY >= blockSunstar.offsetTop - 100 && scrollY < blockSunstar.offsetTop + 600){
+    document.getElementById("titleSun").style.display = "block";
+    document.getElementById("titleSun").style.opacity = 1;
+  }else{
+    document.getElementById("titleSun").style.display = "none";
+    document.getElementById("titleSun").style.opacity = 0;
+  }
+
+  // button Moon and Star
+  if(scrollY >= blockSunstar.offsetTop + 600 && scrollY < blockSunstar.offsetTop + 1700){
+    document.getElementById("titleMoonStar").style.display = "block";
+    document.getElementById("titleMoonStar").style.opacity = 1;
+  }else{
+    document.getElementById("titleMoonStar").style.display = "none";
+    document.getElementById("titleMoonStar").style.opacity = 0;
+  }
+
+  //button Campfire
+  if(scrollY >= blockSunstar.offsetTop + 1700 && scrollY < block2.offsetTop){
+    document.getElementById("titleCamp").style.display = "block";
+    document.getElementById("titleCamp").style.opacity = 1;
+  }else{
+    document.getElementById("titleCamp").style.display = "none";
+    document.getElementById("titleCamp").style.opacity = 0;
+  }
+
+  //button Candle
+  if(scrollY >= blockOffTAndCampOffW + 2000){
+    document.getElementById("titleCandle").style.display = "block";
+    document.getElementById("titleCandle").style.opacity = 1;
+  }else{
+    document.getElementById("titleCandle").style.display = "none";
+    document.getElementById("titleCandle").style.opacity = 0;
+  }
+  
+  //button Torch
+  if(scrollY >= queen.offsetTop - 350 && scrollY < queen.offsetTop + queen.offsetHeight){
+    document.getElementById("titleTorch").style.display = "block";
+    document.getElementById("titleTorch").style.opacity = 1;
+  }
+  else{
+    document.getElementById("titleTorch").style.display = "none";
+    document.getElementById("titleTorch").style.opacity = 0;
+  }
+
+  //button Oil Lamp
+  if(scrollY >= queen.offsetTop + queen.offsetHeight && scrollY < block5.offsetTop - 300){
+    document.getElementById("titleOil").style.display = "block";
+    document.getElementById("titleOil").style.opacity = 1;
+  }
+  else{
+    document.getElementById("titleOil").style.display = "none";
+    document.getElementById("titleOil").style.opacity = 0;
+  }
+
+  //button Prism
+  if(scrollY >= block5.offsetTop && scrollY < block5.offsetTop + block5.offsetHeight + 200){
+    document.getElementById("titlePrism").style.display = "block";
+    document.getElementById("titlePrism").style.opacity = 1;  
+  }else{
+    document.getElementById("titlePrism").style.display = "none";
+    document.getElementById("titlePrism").style.opacity = 0;
+  }
+
+  //button Gas Lamp
+  if(scrollY >=  block7.offsetTop - 300 && scrollY < block8.offsetTop + space2.offsetHeight - 500){
+    document.getElementById("titleGas").style.display = "block";
+    document.getElementById("titleGas").style.opacity = 1;  
+  }else{
+    document.getElementById("titleGas").style.display = "none";
+    document.getElementById("titleGas").style.opacity = 0;
+  }
+
+  //button Light Bulb
+  if(scrollY >= block8.offsetTop + space2.offsetHeight && scrollY < block8.offsetTop + space2.offsetHeight + 2000){
+    document.getElementById("titleLightB").style.display = "block";
+    document.getElementById("titleLightB").style.opacity = 1; 
+  }else{
+    document.getElementById("titleLightB").style.display = "none";
+    document.getElementById("titleLightB").style.opacity = 0; 
+  }
+
+  //button LED
+  if(scrollY >= block8.offsetTop + space2.offsetHeight + 2800 && scrollY < block8.offsetTop + space2.offsetHeight + 5000){
+    document.getElementById("titleLed").style.display = "block";
+    document.getElementById("titleLed").style.opacity = 1;
+  }else{
+    document.getElementById("titleLed").style.display = "none";
+    document.getElementById("titleLed").style.opacity = 0;
+  }
+
+  //button Fluo
+  if(scrollY >= block8.offsetTop + space2.offsetHeight + 6000 && scrollY < block9.offsetTop - 1000){
+    document.getElementById("titleFlu").style.display = "block";
+    document.getElementById("titleFlu").style.opacity = 1;
+  }else{
+    document.getElementById("titleFlu").style.display = "none";
+    document.getElementById("titleFlu").style.opacity = 0;
+  }
+
+  //button Spotlight
+  if(scrollY >= block9.offsetTop && scrollY < block9.offsetTop + blocklight.offsetHeight){
+    document.getElementById("titleSpot").style.display = "block";
+    document.getElementById("titleSpot").style.opacity = 1;
+  }else{
+    document.getElementById("titleSpot").style.display = "none";
+    document.getElementById("titleSpot").style.opacity = 0;
+  }
+
+  //button Laser
+  if(scrollY >= block9.offsetTop + blocklight.offsetHeight + 500 && scrollY < block10.offsetTop - 150){
+    document.getElementById("titleLaser").style.display = "block";
+    document.getElementById("titleLaser").style.opacity = 1;
+  }else{
+    document.getElementById("titleLaser").style.display = "none";
+    document.getElementById("titleLaser").style.opacity = 0;
+  }
 
 // change #night bg, #land bg & opacity fire candle
   if (scrollY >= night.offsetTop) {
@@ -133,7 +257,7 @@ document.body.onscroll = function () {
   if(scrollY >= queen.offsetTop - 350){
     candle.style.transform = "scale(0.33) translateY(2050px) translateX(-15.25%)";
   }
-
+ 
 // opacity wax candle & wick candle
   if(scrollY >= block2.offsetTop - 300 && scrollY < block2.offsetTop){
     wax.style.opacity = "calc( 0 + ((var(--scrollY) - "+ (block2.offsetTop - 300) +") * 0.001))";
@@ -150,15 +274,15 @@ document.body.onscroll = function () {
 
 // opacity smoke
   if(scrollY >= queen.offsetTop){
-    document.getElementById("smoke").style.opacity = 1;
+    smoke.style.opacity = 1;
   }
   else{
-    document.getElementById("smoke").style.opacity = 0;
+    smoke.style.opacity = 0;
   }
 
 // opacity black
   if(scrollY >= block5.offsetTop){
-    prism.style.opacity = 1;
+    prism.style.opacity = 1;  
   }else{
     prism.style.opacity = 0;
   }
@@ -270,3 +394,48 @@ document.body.onscroll = function () {
     document.getElementById("als").style.backgroundImage = "linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255,255,255,0.5) 70%, transparent)";
    }
 };
+
+// Outro Book
+let nextBtn = document.querySelector("#next-btn");
+let book2 = document.querySelector("#book2");
+
+let pp1 = document.querySelector("#pp1");
+let pp2 = document.querySelector("#pp2");
+let pp3 = document.querySelector("#pp3");
+
+nextBtn.addEventListener("click", goNextPage2);
+
+let currentLocation2 = 1;
+let numOfPapers2 = 3;
+let maxLocation2 = numOfPapers2 + 1;
+
+function closeBook2(isAtBeginning) {
+  if (isAtBeginning) {
+    book2.style.transform = "translateX(0%)";
+  } else {
+    book2.style.transform = "translateX(100%)";
+  }
+  nextBtn.style.transform = "translateX(0px)";
+}
+
+function goNextPage2() {
+  if (currentLocation2 < maxLocation2) {
+    switch (currentLocation2) {
+      case 1:
+        pp2.classList.add("flipped");
+        pp2.style.zIndex = 2;
+        break;
+      case 2:
+        pp3.classList.add("flipped");
+        pp3.style.zIndex = 3;
+        nextBtn.remove();
+        closeBook2(false);
+        break;
+      default:
+        throw new Error("unkown state");
+    }
+    currentLocation2++;
+  }
+}
+
+
