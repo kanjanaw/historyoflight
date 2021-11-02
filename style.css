@@ -976,12 +976,14 @@ button {
   font-size: 0.9em;
   margin: 1em;
   text-align: center;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 }
 
 .last-outro {
   font-size: 1em;
   margin: 1em;
   text-align: center;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 }
 
 .highlight {
@@ -999,6 +1001,7 @@ button {
   right: 0;
   bottom: 0;
   text-align: right;
-  font-size: 0.5em;
+  font-size: 0.8em;
   position: absolute;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 }
