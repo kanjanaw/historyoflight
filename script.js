@@ -396,49 +396,46 @@ document.body.onscroll = function () {
 };
 
 // Outro Book
-// const nextBtn = document.querySelector("#next-btn");
-// const book2 = document.querySelector("#book2");
+let nextBtn = document.querySelector("#next-btn");
+let book2 = document.querySelector("#book2");
 
-// const pp1 = document.querySelector("#pp1");
-// const pp2 = document.querySelector("#pp2");
-// const pp3 = document.querySelector("#pp3");
+let pp1 = document.querySelector("#pp1");
+let pp2 = document.querySelector("#pp2");
+let pp3 = document.querySelector("#pp3");
 
-// // Event Listener
+nextBtn.addEventListener("click", goNextPage2);
 
-// nextBtn.addEventListener("click", goNextPage2);
+let currentLocation2 = 1;
+let numOfPapers2 = 3;
+let maxLocation2 = numOfPapers2 + 1;
 
-// // Business Logic
-// let currentLocation = 1;
-// let numOfPapers = 3;
-// let maxLocation = numOfPapers + 1;
+function closeBook2(isAtBeginning) {
+  if (isAtBeginning) {
+    book2.style.transform = "translateX(0%)";
+  } else {
+    book2.style.transform = "translateX(100%)";
+  }
+  nextBtn.style.transform = "translateX(0px)";
+}
 
-// function closeBook2(isAtBeginning) {
-//   if (isAtBeginning) {
-//     book2.style.transform = "translateX(0%)";
-//   } else {
-//     book2.style.transform = "translateX(100%)";
-//   }
-//   nextBtn.style.transform = "translateX(0px)";
-// }
-
-// function goNextPage2() {
-//   if (currentLocation < maxLocation) {
-//     switch (currentLocation) {
-//       case 1:
-//         pp2.classList.add("flipped");
-//         pp2.style.zIndex = 2;
-//         break;
-//       case 2:
-//         pp3.classList.add("flipped");
-//         pp3.style.zIndex = 3;
-//         nextBtn.remove();
-//         closeBook2(false);
-//         break;
-//       default:
-//         throw new Error("unkown state");
-//     }
-//     currentLocation++;
-//   }
-// }
+function goNextPage2() {
+  if (currentLocation2 < maxLocation2) {
+    switch (currentLocation2) {
+      case 1:
+        pp2.classList.add("flipped");
+        pp2.style.zIndex = 2;
+        break;
+      case 2:
+        pp3.classList.add("flipped");
+        pp3.style.zIndex = 3;
+        nextBtn.remove();
+        closeBook2(false);
+        break;
+      default:
+        throw new Error("unkown state");
+    }
+    currentLocation2++;
+  }
+}
 
 
