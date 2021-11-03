@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
   background-color: #271149;
 }
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
@@ -20,27 +20,23 @@ div {
   width: 100vw;
   height: 100vh;
 }
-a-scene {
-  height: 50%;
-  width: 50%;
-}
-h1{
-  font-family: 'Rozha One', serif;
-  font-size: 3.75rem;
+h1 {
+  font-family: "Rozha One", serif;
+  font-size: 3.65vw;
   font-weight: 400;
   text-align: center;
   padding: 0;
   margin: 0;
 }
-h2{
-  font-family: 'Rozha One', serif;
-  font-size: 2.2rem;
+h2 {
+  font-family: "Rozha One", serif;
+  font-size: 2.1vw;
   font-weight: 400;
   text-align: center;
   padding: 0;
   margin: 0;
 }
-#blockSunstar{
+#blockSunstar {
   height: 200vh;
   width: 100vw;
   background: linear-gradient(
@@ -60,7 +56,7 @@ h2{
   color: white;
   position: relative;
 }
-.block0{
+.block0 {
   height: 100vh;
   width: 100%;
   background-color: black;
@@ -87,19 +83,17 @@ h2{
     #9be2fe
   );
 }
-.block3{
+.block3 {
   background: #9be2fe;
   height: 100%;
   width: 100vw;
 }
-.block4{
-  background: linear-gradient(
-    #9be2fe,
-    #67d1fb);
-    height: 100%;
-    width: 100vw;
+.block4 {
+  background: linear-gradient(#9be2fe, #67d1fb);
+  height: 100%;
+  width: 100vw;
 }
-.block5{
+.block5 {
   background: linear-gradient(
     #67d1fb,
     #38a3d1,
@@ -107,22 +101,42 @@ h2{
     #1e528e,
     #123558,
     #071b26,
-    #000);
+    #000
+  );
   height: 350vh;
   width: 100vw;
   display: flex;
   align-items: flex-start;
 }
-.block6{
-  background: linear-gradient(
-    #000000,
-    #080019);
+.block6 {
+  background: linear-gradient(#000000, #080019);
 }
-.block7{
-  width: 100%;
+.block7 {
+  width: 100vw;
   height: 100vh;
 }
-.block8{
+
+.block7 div{
+  display: block;
+  height: 0;
+  width: 0;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.intrinsic-box {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.intrinsic-box a-scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.block8 {
   background: black;
   height: 1100vh;
   width: 100vw;
@@ -130,7 +144,7 @@ h2{
   align-items: flex-start;
   flex-direction: column;
 }
-.block9{
+.block9 {
   width: 100%;
   height: 300vh;
   background-color: black;
@@ -165,15 +179,15 @@ h2{
   position: absolute;
 }
 .wood {
-  width: 15%;
+  width: 30vw;
   z-index: auto;
   position: absolute;
-  bottom: 4%;
+  bottom: 6vh;
 }
 .bonfire {
   position: absolute;
   z-index: auto;
-  bottom: 10%;
+  bottom: 11vh;
   transform: rotate(-180deg);
   text-align: center;
   justify-content: center;
@@ -334,7 +348,6 @@ h2{
   transform-origin: bottom center;
   left: 0;
   right: 0;
-
 }
 #candleWax {
   text-align: center;
@@ -346,11 +359,11 @@ h2{
   z-index: auto;
   display: block;
   margin-left: auto;
-  margin-right: auto; 
-  width: 24%;
+  margin-right: auto;
+  width: 24vw;
   margin-top: 300px;
   padding-bottom: 300px;
-  align-self: flex-end; 
+  align-self: flex-end;
 }
 #post {
   width: 400px;
@@ -364,135 +377,132 @@ h2{
 }
 #day {
   position: relative;
-  width: 100%;
+  width: 100vw;
   min-height: 50vh;
 }
 #night {
   position: relative;
   background-image: url("https://static.typingclub.com/m/tpmedia/img/sky2.png");
-  width: 100%;
+  width: 100vw;
   min-height: 200vh;
 }
 
-@keyframes fade-in{
-  0%{
-      opacity: 0;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
   }
-  50%{
-      opacity: 0.5;
+  50% {
+    opacity: 0.5;
   }
-  100%{
-      opacity: 1;
+  100% {
+    opacity: 1;
   }
 }
 
 #land {
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   z-index: auto;
   opacity: 1;
   animation: fade-in 2s linear;
 }
-.star{
-  z-index:auto;
+.star {
+  z-index: auto;
   background-image: url("https://static.typingclub.com/m/tpmedia/img/sky2.png");
   width: 100vw;
   height: 100vh;
 }
-.smoke{
+.smoke {
   z-index: auto;
   display: block;
   margin-left: auto;
-  margin-right: auto; 
-  margin-top: -60%;
-  width: 80%;
+  margin-right: auto;
+  margin-top: -95vh;
+  width: 80vw;
   transition: 1s;
   opacity: 0;
 }
-#oillamp{
+#oillamp {
   z-index: auto;
-  width: 40%;
-  margin-top: -10%;
-  margin-left: 13%;
+  width: 40vw;
+  margin-top: -10vh;
+  margin-left: 13vw;
 }
-
-.black{
+.black {
   background: black;
   position: relative;
   display: grid;
 }
-#space{
+#space {
   height: 60vh;
 }
-#tri{
+#tri {
   z-index: 1;
   place-self: center;
 }
-#light1{
+#light1 {
   z-index: auto;
   width: 0px;
-  height: 100px;
-  background:white;
+  height: 6.5vw;
+  background: white;
   position: absolute;
   place-self: center start;
 }
-.light{
+.light {
   width: 0px;
-  height:6vh;
-  margin:0px;
+  height: 3.2vw;
+  margin: 0;
 }
-.rainbow{
+.rainbow {
   z-index: auto;
   position: absolute;
   place-self: center;
-  left: 49%;
-  width:fit-content;
+  left: 49vw;
+  width: fit-content;
   height: fit-content;
 }
-#red{
-  background:red;
+#red {
+  background: red;
 }
-#orange{
-  background: orange;
+#orange {
+  background: #f77f00;
 }
-#yellow{
-  background:yellow;
+#yellow {
+  background: rgb(255, 230, 0);
 }
-#green{
-  background:rgb(0, 255, 0);
+#green {
+  background: #1ae20f;
 }
-#blue{
-  background:blue;
+#blue {
+  background: cyan;
 }
-#cyan{
-  background:cyan;
+#cyan {
+  background: #0046ff;
 }
-#purple{
-  background:magenta;
+#purple {
+  background: #4b0082;
 }
-.contain{
+.contain {
   top: 0;
   position: sticky;
   width: 100vw;
   height: 100vh;
-  transition: .8s;
+  transition: 0.8s;
   opacity: 0;
 }
-#space2{
-  background: linear-gradient(
-    #080019,
-    #000000);
+#space2 {
+  background: linear-gradient(#080019, #000000);
   height: 50vh;
 }
-.container{
+.container {
   top: 0;
   position: sticky;
   width: 100vw;
   height: 100vh;
   flex-direction: column;
 }
-#bulbbase{
+#bulbbase {
   z-index: auto;
   transition: 2s;
 }
@@ -501,43 +511,45 @@ h2{
   height: 8px;
   z-index: auto;
   position: absolute;
-  top:45.5%;
-  background-image: linear-gradient(#f3ac47, rgba(251,225,29,1), #f3ac47);
+  top: 45.5vh;
+  background-image: linear-gradient(#f3ac47, rgba(251, 225, 29, 1), #f3ac47);
   box-shadow: 0 0 15px 8px #f3ac47;
   border-radius: 20px;
   transition: 2s;
 }
-.lightneon{
+.lightneon {
   width: 5.25vw;
   height: 8px;
   z-index: -1;
   position: absolute;
-  top:45.5%;
-  background:transparent;
+  top: 45.5%;
+  background: transparent;
   animation: none;
   box-shadow: 0 0 300px 60px #fae30e;
 }
 @keyframes effect1 {
-  from{
+  from {
     box-shadow: 0 0 50px 10px #fae30e;
-  }to{
+  }
+  to {
     box-shadow: 0 0 300px 60px #fae30e;
   }
 }
 @keyframes effect2 {
-  from{
+  from {
     box-shadow: 0 0 300px 60px #fae30e;
-  }to{
+  }
+  to {
     box-shadow: 0 0 50px 10px #fae30e;
   }
 }
-.ledbulb{
+.ledbulb {
   width: 9%;
   height: 34%;
   background: rgba(240, 240, 240, 1);
   position: absolute;
   z-index: auto;
-  top: 27%;
+  top: 27vh;
   border-radius: 50% 50% 40% 40% / 60% 60% 30% 30%;
   opacity: 0;
   animation: shine 1s infinite alternate;
@@ -545,21 +557,21 @@ h2{
 }
 @keyframes shine {
   from {
-    box-shadow: 0 0 90px rgba(255, 255, 213, 0.5), 0 0 40px rgba(255, 255, 213, 0.5),
+    box-shadow: 0 0 90px rgba(255, 255, 213, 0.5),
+      0 0 40px rgba(255, 255, 213, 0.5),
       inset 0 0 60px 10px rgba(255, 255, 213, 0.5);
   }
   to {
-    box-shadow: 0 0 50px rgba(255, 255, 213, 0.5), 0 0 30px rgba(255, 255, 213, 0.5),
+    box-shadow: 0 0 50px rgba(255, 255, 213, 0.5),
+      0 0 30px rgba(255, 255, 213, 0.5),
       inset 0 0 28px 15px rgba(255, 255, 213, 0.5);
   }
 }
-
-.first-page{
+.first-page {
   width: 100%;
   height: 100%;
 }
-
-.border{
+.border {
   width: 200px;
   height: 200px;
   border-radius: 100%;
@@ -567,26 +579,26 @@ h2{
   border: 5px solid white;
   position: relative;
   animation: scale1 2s linear infinite;
-  animation-delay: .2s;
+  animation-delay: 0.2s;
 }
-@keyframes scale1{
-  0%{
-      transform: scale(0.5);
+@keyframes scale1 {
+  0% {
+    transform: scale(0.5);
   }
-  25%{
-      transform: scale(1);
+  25% {
+    transform: scale(1);
   }
-  60%{
-      transform: scale(1.2);
+  60% {
+    transform: scale(1.2);
   }
-  80%{
-      transform: scale(1);
+  80% {
+    transform: scale(1);
   }
-  100%{
-      transform: scale(0.5);
+  100% {
+    transform: scale(0.5);
   }
 }
-.btn-start{
+.btn-start {
   margin: auto;
   width: 100px;
   height: 100px;
@@ -596,26 +608,26 @@ h2{
   cursor: pointer;
   animation: beat 2s linear infinite;
 }
-@keyframes beat{
-  0%{
-      transform: scale(1);
+@keyframes beat {
+  0% {
+    transform: scale(1);
   }
-  25%{
-      transform: scale(1.5);
+  25% {
+    transform: scale(1.5);
   }
-  60%{
-      transform: scale(2.0);
+  60% {
+    transform: scale(2);
   }
-  80%{
-      transform: scale(1.5);
+  80% {
+    transform: scale(1.5);
   }
-  100%{
-      transform: scale(1);
+  100% {
+    transform: scale(1);
   }
 }
-.start{
+.start {
   margin: 1.2em;
-  font-size: 2em;
+  font-size: 2vw;
   font-weight: 500;
   color: white;
 }
@@ -626,17 +638,16 @@ h2{
   transition: transform 0.5s;
   display: none;
   color: white;
-  animation: fade-in 2s linear; 
+  animation: fade-in 2s linear;
 }
 
 .paper {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
   perspective: 1500px;
-
 }
 .front,
 .back {
@@ -663,20 +674,19 @@ h2{
 .back-content {
   width: 100%;
   height: 100%;
-  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
 }
 .back-content {
-  transform: rotateY(180deg)
+  transform: rotateY(180deg);
 }
-.book-name{
-  font-size: 2.5em;
+.book-name {
+  font-size: 2vw;
   font-weight: 500;
   margin: 1.5em;
   text-align: center;
 }
-.genesis{
-  font-size: 1.1em;
+.genesis {
+  font-size: 0.92vw;
   font-weight: 500;
   margin: 1em;
   text-align: center;
@@ -686,7 +696,7 @@ h2{
 .flipped .back {
   transform: rotateY(-180deg);
 }
-#f1{
+#f1 {
   cursor: pointer;
 }
 #p1 {
@@ -695,16 +705,12 @@ h2{
 #p2 {
   z-index: 2;
 }
-#nighttoday{
+#nighttoday {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(
-  #000,
-  #eeeeee,
- #9be2fe
-   );
+  background: linear-gradient(#000, #eeeeee, #9be2fe);
 }
-#flu_img{
+#flu_img {
   z-index: auto;
   position: absolute;
   top: 49%;
@@ -714,7 +720,7 @@ h2{
 
 @keyframes flu_shine {
   from {
-    box-shadow: 0 0 40px hsl( 10, 100%, 100%),
+    box-shadow: 0 0 40px hsl(10, 100%, 100%),
       inset 0 0 30px 15px hsl(10, 100%, 100%);
   }
   to {
@@ -723,7 +729,7 @@ h2{
   }
 }
 
-.blockrelative{
+.blockrelative {
   position: relative;
   height: 200px;
   width: 200px;
@@ -735,45 +741,37 @@ h2{
   transition: 1s;
 }
 
-.als{
+.als {
   width: 100%;
   height: 80%;
   padding: 15%;
   position: absolute;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255,255,255,0.5) 70%, transparent);
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.5) 70%,
+    transparent
+  );
   transform-style: preserve-3d;
-  transform: rotatey(-45deg) ;
-  border-radius:40% 0 0 40%;
+  transform: rotatey(-45deg);
+  border-radius: 40% 0 0 40%;
 }
 
-#blocklight{
+#blocklight {
   overflow: hidden;
 }
 
-/* #blockrelative [data-active="1"] {
-  perspective: 1000px;
-  height: 10px;
-  width: 0;
-  transform: rotateZ(25deg);
-  margin-top: 1%;
-  margin-left: -3%;
-} */
-/* #als [data-active="1"]{
-  width: 650%;
-  height: 20%;
-  padding: 8%;
-} */
-
-.bg-title{
+.bg-title {
   color: white;
   position: fixed;
   z-index: auto;
-  height: 90px;
+  height: 10vh;
   top: 9%;
   left: 4%;
   margin: 0;
   padding: 0;
   text-align: center;
+  align-items: center;
   border: solid 1px white;
   border-radius: 50%;
   cursor: pointer;
@@ -782,56 +780,55 @@ h2{
   transition: 1s all;
 }
 
-
-#titleSun{
+#titleSun {
+  width: 15vw;
+}
+#titleMoonStar {
+  width: 25vw;
+}
+#titleCamp {
+  width: 20vw;
+}
+#titleCandle {
+  width: 20vw;
+  left: 140vw;
+  top: 40vh;
+}
+#open-modal-candle {
+  left: 100vw;
+}
+#titleTorch {
   width: 300px;
 }
-#titleMoonStar{
-  width: 480px;
-}
-#titleCamp{
-  width: 380px;
-}
-#titleCandle{
-  width: 350px;
-  left: 70.5%;
-  top: 40%;
-}
-#open-modal-candle{
-  left: 50%;
-}
-#titleTorch{
-  width: 300px;
-}
-#titleOil{
+#titleOil {
   width: 380px;
   left: 70%;
   top: 45%;
   color: black;
   border-color: black;
 }
-#titlePrism{
-  width: 300px;
+#titlePrism {
+  width: 15vw;
 }
-#titleGas{
+#titleGas {
   width: 400px;
   top: 45%;
 }
-#titleLightB{
+#titleLightB {
   width: 450px;
 }
-#titleLed{
+#titleLed {
   width: 300px;
 }
-#titleFlu{
+#titleFlu {
   width: 450px;
 }
-#titleSpot{
+#titleSpot {
   width: 400px;
   left: 72%;
   top: 45%;
 }
-#titleLaser{
+#titleLaser {
   width: 300px;
   left: 77%;
   top: 45%;
@@ -856,8 +853,10 @@ h2{
   pointer-events: auto;
 }
 .modal-window > div {
-  width:28%;
+  width: 30vw;
   height: auto;
+  max-height: 70vh;
+  overflow: auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -869,15 +868,29 @@ h2{
   font-weight: bold;
 }
 .modal-window p {
-  font-size: 1.1rem;
-  text-indent: 3em;
-  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+  font-size: 1vw;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+}
+/* width */
+div::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Handle */
+div::-webkit-scrollbar-thumb {
+  background: #282828;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+div::-webkit-scrollbar-thumb:hover {
+  background: #a9a9a9;
 }
 .modal-close {
-  font-family: 'Rozha One', serif;
+  font-family: "Rozha One", serif;
   color: #aaa;
   line-height: 50px;
-  font-size: 100%;
+  font-size: 0.85vw;
   position: absolute;
   right: 0;
   text-align: center;
@@ -973,19 +986,21 @@ button {
 }
 
 .outro {
-  font-size: 0.9em;
+  font-size: 0.92vw;
   margin: 1em;
   text-align: center;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
 }
 
 .last-outro {
-  font-size: 1em;
+  font-size: 0.92vw;
   margin: 1em;
   text-align: center;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
 }
 
 .highlight {
-  font-size: 1.2em;
+  font-size: 1.1vw;
 }
 
 #back-cover {
@@ -995,10 +1010,21 @@ button {
 }
 
 .credit {
-  padding: .75em;
+  padding: 0.75em;
   right: 0;
   bottom: 0;
   text-align: right;
-  font-size: 0.5em;
+  font-size: 0.72vw;
   position: absolute;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+}
+.blockquote-footer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.8vw;
+}
+.blockquote-footer::before {
+  content: "— ";
 }

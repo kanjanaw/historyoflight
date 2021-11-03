@@ -437,5 +437,3 @@ function goNextPage2() {
     currentLocation2++;
   }
 }
-
-
