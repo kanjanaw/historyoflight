@@ -37,7 +37,7 @@ h2 {
   margin: 0;
 }
 #blockSunstar {
-  height: 200vh;
+  height: 400vh;
   width: 100vw;
   background: linear-gradient(
     #9be2fe,
@@ -146,7 +146,7 @@ h2 {
 }
 .block9 {
   width: 100vw;
-  height: 300vh;
+  height: 500vh;
   background-color: black;
   display: flex;
 }
@@ -384,7 +384,7 @@ h2 {
   position: relative;
   background-image: url("https://static.typingclub.com/m/tpmedia/img/sky2.png");
   width: 100vw;
-  min-height: 200vh;
+  min-height: 450vh;
 }
 
 @keyframes fade-in {
@@ -644,10 +644,10 @@ h2 {
 .paper {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 65vh;
   top: 0;
   left: 0;
-  perspective: 1500px;
+  perspective: 250vw;
 }
 .front,
 .back {
@@ -738,7 +738,7 @@ h2 {
   perspective: 100px;
   transform: rotatez(40deg);
   opacity: 1;
-  transition: 1s;
+  transition: 1s opacity;
 }
 
 .als {
@@ -778,8 +778,19 @@ h2 {
   display: none;
   opacity: 0;
   transition: 1s all;
+  /* animation: glow 1s infinite ; */
 }
-
+@keyframes glow{
+  0%{
+  box-shadow: 5px 5px 20px whitesmoke,-5px -5px 20px whitesmoke;
+}  
+  50%{
+  box-shadow: 5px 5px 20px wheat,-5px -5px 20px wheat;
+  }
+  100%{
+  box-shadow: 5px 5px 20px whitesmoke,-5px -5px 20px whitesmoke;
+  }
+}
 #titleSun {
   width: 15vw;
 }
@@ -825,12 +836,12 @@ h2 {
 }
 #titleSpot {
   width: 400px;
-  left: 72%;
+  left: 68%;
   top: 45%;
 }
 #titleLaser {
   width: 300px;
-  left: 77%;
+  left: 73%;
   top: 45%;
 }
 .modal-window {
@@ -914,21 +925,21 @@ small {
 
 .book2 {
   position: relative;
-  width: 350px;
-  height: 500px;
+  width: 25vw;
+  height: 65vh;
   transition: transform 0.5s;
   transform: translateX(60%);
   color: white;
 }
 
-.paper {
+/* .paper {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
   perspective: 1500px;
-}
+} */
 
 .front-content,
 .back-content {
@@ -970,13 +981,13 @@ button {
   cursor: pointer;
   margin: 10px;
   transition: transform 0.5s;
-  font-size: 3em;
+  font-size: 3vw;
   z-index: 0;
   color: white;
 }
 
 #next-btn {
-  transform: translateX(205px) translateY(230px);
+  transform: translateX(13vw) translateY(29vh);
 }
 
 .content-block {
@@ -1008,7 +1019,6 @@ button {
   height: 100%;
   position: relative;
 }
-
 .credit {
   padding: 0.75em;
   right: 0;

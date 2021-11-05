@@ -92,7 +92,7 @@ document.body.onscroll = function () {
   document.body.style.setProperty("--prismTop", block5.offsetTop);
 
   // button Sun
-  if(scrollY >= blockSunstar.offsetTop - 100 && scrollY < blockSunstar.offsetTop + 600){
+  if(scrollY >= blockSunstar.offsetTop - 100 && scrollY < blockSunstar.offsetTop + 1200){
     document.getElementById("titleSun").style.display = "block";
     document.getElementById("titleSun").style.opacity = 1;
   }else{
@@ -101,7 +101,7 @@ document.body.onscroll = function () {
   }
 
   // button Moon and Star
-  if(scrollY >= blockSunstar.offsetTop + 600 && scrollY < blockSunstar.offsetTop + 1700){
+  if(scrollY >= blockSunstar.offsetTop + 1200 && scrollY < blockSunstar.offsetTop + 2300){
     document.getElementById("titleMoonStar").style.display = "block";
     document.getElementById("titleMoonStar").style.opacity = 1;
   }else{
@@ -110,7 +110,7 @@ document.body.onscroll = function () {
   }
 
   //button Campfire
-  if(scrollY >= blockSunstar.offsetTop + 1700 && scrollY < block2.offsetTop){
+  if(scrollY >= blockSunstar.offsetTop + 2300 && scrollY < block2.offsetTop){
     document.getElementById("titleCamp").style.display = "block";
     document.getElementById("titleCamp").style.opacity = 1;
   }else{
@@ -148,7 +148,7 @@ document.body.onscroll = function () {
   }
 
   //button Prism
-  if(scrollY >= block5.offsetTop && scrollY < block5.offsetTop + block5.offsetHeight + 200){
+  if(scrollY >= block5.offsetTop && scrollY < block5.offsetTop + (block5.offsetHeight/1.35)){
     document.getElementById("titlePrism").style.display = "block";
     document.getElementById("titlePrism").style.opacity = 1;  
   }else{
@@ -157,7 +157,7 @@ document.body.onscroll = function () {
   }
 
   //button Gas Lamp
-  if(scrollY >=  block7.offsetTop - 300 && scrollY < block8.offsetTop + space2.offsetHeight - 500){
+  if(scrollY >=  block7.offsetTop - 300 && scrollY < block8.offsetTop + (space2.offsetHeight/2)){
     document.getElementById("titleGas").style.display = "block";
     document.getElementById("titleGas").style.opacity = 1;  
   }else{
@@ -369,7 +369,7 @@ document.body.onscroll = function () {
    }
 
    //laser
-   if(scrollY >= block9.offsetTop + blocklight.offsetHeight + 500){
+   if(scrollY >= block9.offsetTop + blocklight.offsetHeight + 1000){
     document.getElementById("blockrelative").style.perspective = "1000px";
     document.getElementById("blockrelative").style.height = "10px";
     document.getElementById("blockrelative").style.width = "";
