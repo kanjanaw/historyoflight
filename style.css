@@ -766,6 +766,7 @@ h2 {
   position: fixed;
   z-index: auto;
   height: 10vh;
+  width: 12vw;
   top: 9%;
   left: 4%;
   margin: 0;
@@ -778,19 +779,8 @@ h2 {
   display: none;
   opacity: 0;
   transition: 1s all;
-  /* animation: glow 1s infinite ; */
 }
-@keyframes glow{
-  0%{
-  box-shadow: 5px 5px 20px whitesmoke,-5px -5px 20px whitesmoke;
-}  
-  50%{
-  box-shadow: 5px 5px 20px wheat,-5px -5px 20px wheat;
-  }
-  100%{
-  box-shadow: 5px 5px 20px whitesmoke,-5px -5px 20px whitesmoke;
-  }
-}
+
 #titleSun {
   width: 15vw;
 }
@@ -931,15 +921,6 @@ small {
   transform: translateX(60%);
   color: white;
 }
-
-/* .paper {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  perspective: 1500px;
-} */
 
 .front-content,
 .back-content {
