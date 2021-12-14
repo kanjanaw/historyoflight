@@ -786,8 +786,30 @@ h2 {
   cursor: pointer;
   display: none;
   opacity: 0;
-  transition: 1s all;
+  transition: 0.5s all;
+  animation: beat2 2s ease infinite;
 }
+
+@keyframes beat2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bg-title:hover{
+  background-color: white;
+  color: black;
+  mix-blend-mode: screen;
+  opacity: 0.9;
+  animation-play-state: paused;
+}
+
 
 #titleSun {
   width: 15vw;
