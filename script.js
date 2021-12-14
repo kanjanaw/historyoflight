@@ -222,7 +222,7 @@ document.body.onscroll = function () {
 
 // reduce opacity mountain and campfire
   if(scrollY >= blockOffTAndCampOffW + 500){
-    document.querySelector("#land").style.opacity = "calc( 1 - ((var(--scrollY) - 4000) * 0.001))";
+    document.querySelector("#land").style.opacity = "calc( 1 - ((var(--scrollY) - 6000) * 0.001))";
     document.getElementsByClassName("fire-sub")[0].style.opacity = "calc( 0 + ((var(--scrollY) - 4500) * 0.001))";
   }
 
