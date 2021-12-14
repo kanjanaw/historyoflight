@@ -370,16 +370,16 @@ document.body.onscroll = function () {
 
    //laser
    if(scrollY >= block9.offsetTop + blocklight.offsetHeight + 1000){
-    document.getElementById("blockrelative").style.perspective = "100px";
+    document.getElementById("blockrelative").style.perspective = "2000px";
     document.getElementById("blockrelative").style.height = "2px";
     document.getElementById("blockrelative").style.width = "";
     document.getElementById("blockrelative").style.transform = "rotatez(25deg)";
     document.getElementById("blockrelative").style.marginLeft = "-3%";
 
-    document.getElementById("als").style.width = "650%";
+    document.getElementById("als").style.width = "1050%";
     document.getElementById("als").style.height = "100%";
-    document.getElementById("als").style.padding = "8%";
-    document.getElementById("als").style.backgroundImage = "linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(255,0,0,0.5) 100%, transparent)";
+    document.getElementById("als").style.padding = "5%";
+    document.getElementById("als").style.backgroundImage = "linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255,0,0,1) 100%)";
    }
    else{
     document.getElementById("blockrelative").style.perspective = "100px";
